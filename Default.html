@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PacificVis</title>
+
+    <style>
+
+        .node {
+            cursor: pointer;
+        }
+
+        .node circle {
+            stroke: '#f0f';
+            stroke-width: 4px;
+        }
+
+        .node text {
+            font: 12px sans-serif;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+        .fill_normal {
+            fill: green;
+        }
+
+
+
+        .tooltip{
+            position: absolute;
+            text-align: center;
+            width: 160px;
+            height: 100px;
+            background: #444444;
+            /*padding: 2vw;*/
+            font: 1.2vw sans-serif;
+            border: 0px;
+            border-radius: 5px;
+            color:white;
+            /*字体颜色*/
+            box-shadow: -3px 3px 15px #888888;
+            opacity:0.8;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="./JS/echarts.js" ></script>
+    <script type="text/javascript" src="./JS/china.js" ></script>
+    <script type="text/javascript" src="./JS/echarts-gl.js"></script>
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="./js/windowstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/windowstyle.css" />
+
+    <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery-resize/1.1/jquery.ba-resize.js"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="./js/windowstyle.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/windowstyle.css" />
+
+
+
+
+    <!--mapbox地图引入-->
+    //<script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+
+    <div id = 'page' style="height: 100%; width: 100%; position:absolute;">
+
+        <div id = 'title' style="height: 5%; width: 100%; float: left;">
+            <nav>
+                <a id="userPLink">
+                    <span class="fa fa-leaf"></span>
+                    PansyTree Visualization
+                </a>
+            </nav>
+        </div>
+
+        <div id = 'left' style="height: 95%; width: 100%; float: left; border: solid #dce3e8; border-width: 8px 8px 8px 8px;">
+            <svg id = 'main' width= "100%" height = "100%">
+                <div id="drag">
+                    <div class="title">
+                        <h2>Legend</h2>
+                        <div>
+                            <a class="min" href="javascript:;" title="Minimum"></a>
+                            <a class="max" href="javascript:;" title="Maximum"></a>
+                            <a class="revert" href="javascript:;" title="Revert"></a>
+                            <a class="close" href="javascript:;" title="Close"></a>
+                        </div>
+                    </div>
+                    <div class="resizeL"></div>
+                    <div class="resizeT"></div>
+                    <div class="resizeR"></div>
+                    <div class="resizeB"></div>
+                    <div class="resizeLT"></div>
+                    <div class="resizeTR"></div>
+                    <div class="resizeBR"></div>
+                    <div class="resizeLB"></div>
+                    <!--    <div class="content" id="dragwindow">-->
+
+                    <!--    </div>-->
+                    <div class = "content" id="dragwindow" style="height: 70%" >
+
+
+                    </div>
+                    <div class = "content" id="selectbotton" style="height: 10%" >
+<!--                        <button type="button" style="width: 60px" onclick="Expandall()">Expand</button>-->
+<!--                        <button type="button" style="width: 60px" onclick="Reset()">Reset</button>-->
+                    </div>
+
+                </div>
+            </svg>
+        </div>
+<!--        <div id = 'right' style="height: 95%; width: 40%; float: left; border: solid #dce3e8; border-width: 8px 8px 8px 8px;">-->
+<!--            <div id = 'tree' style="height: 50%; width: 100%; float: left; border: solid #dce3e8; border-width: 0px 0px 8px 0px; ">-->
+
+<!--            </div>-->
+<!--            <div id = 'mapbox' style="height: 50%; width: 100%; float: left; border: solid #dce3e8; border-width: 0px 0px 0px 0px;">-->
+
+<!--            </div>-->
+
+<!--&lt;!&ndash;            <div id = 'pearson' style="height: 30%; width: 100%; float: left;">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </div>-->
+
+    </div>
+
+    <script type="text/javascript">
+        var w = window.innerHeight;
+        var h = window.innerWidth;
+
+        // var w = 960,
+        //     h = 500;
+
+        // var w = document.getElementById("left").innerWidth;
+        // var h = document.getElementById("left").innerHeight;
+
+        //console.log([w, h]);
+
+        var margin = {top: 10, right: 10, bottom: 10, left: 10},
+            width = 600 - margin.left - margin.right,
+            height = 600 - margin.top - margin.bottom,
+            radius = 24;
+
+        //var Colorpannel = ['#FF5964','#FFCF56','#1D4E89','rgba(135,135,135,0)'];
+        //var Colorpannel = ['#FF5964','#FFCF56','#1D4E89','#878787'];
+        var Colorpannel = ['#F05964','#FFCF20','#1D4E89','#909987'];
+
+        var FlagPieArc = {};
+
+        var InnerRadius = 2;
+
+        var keyc = true, keys = true, keyt = true, keyr = true, keyx = true, keyd = true, keyl = true, keym = true, keyh = true, key1 = true, key2 = true, key3 = true, key0 = true
+
+        var focus_node = null, highlight_node = null;
+
+        var text_center = false;
+        var outline = false;
+
+        var min_score = 0;
+        var max_score = 1;
+
+        var legendpiestatus = [0,0,0];
+        var savestatus = [];
+
+        //流线速度数组
+        var linespeed = [];
+
+        // var color = d3.scale.linear()
+        //     .domain([min_score, (min_score+max_score)/2, max_score])
+        //     .range(["lime", "yellow", "red"]);
+
+        var color = d3.scale.category10();
+        // console.log(d3.scale.category10());
+
+
+        var highlight_color = "black";
+        var highlight_trans = 0.1;
+
+        var size = d3.scale.pow().exponent(0.5)
+            .domain([0.2,100])
+            .range([2,30]);
+
+        var force = d3.layout.force()
+        // .linkDistance(1)
+            .gravity(0.5)
+            .charge(-4000)
+            .size([w, h]);
+
+        var locationmarknumber = [['Northern China', 5], ['Eastern China', 5], ['Southern China', 3], ['Central China', 3], ['North East', 3], ['North West', 5], ['South West', 5]];
+        var locationmarkprovince = ['beijing', 'tianjin', 'hebei', 'shanxi', 'inner mongolia', 'shandong', 'jiangsu', 'anhui', 'jiangxi', 'fujian', 'guangdong', 'guangxi', 'hainan', 'henan', 'hubei', 'hunan', 'heilongjiang', 'jilin', 'liaoning', 'shaanxi', 'gansu', 'ningxia', 'qinghai', 'xinjiang', 'sichuan', 'guizhou', 'yunnan', 'chongqing', 'tibet'];
+        var default_node_color = "#ccc";
+        //var default_node_color = "rgb(3,190,100)";
+        var default_link_color = "#888";
+        var nominal_base_node_size = 14;
+        var nominal_text_size = 16;
+        var max_text_size = 30;
+        var nominal_stroke = 1.5;
+        var max_stroke = 4.5;
+        var max_base_node_size = 30;
+        var min_zoom = 0.3;
+        var max_zoom = 2.5;
+        var svg = d3.select("#main").append("svg");
+
+        var zoom = d3.behavior.zoom().scaleExtent([min_zoom,max_zoom]);
+        var g = svg.append("g");
+        svg.style("cursor","move");
+
+        var tocolor = "fill";
+        var towhite = "stroke";
+        if (outline) {
+            tocolor = "stroke";
+            towhite = "fill";
+        }
+        function descentsort(x,y){
+            return y.province - x.province
+        }
+        var legendtempdata = [];
+
+        //Pearson
+        function Pearson (x,y) {
+            let sumX = 0,
+
+                sumY = 0,
+
+                sumXY = 0,
+
+                sumX2 = 0,
+
+                sumY2 = 0;
+
+            const minLength = x.length = y.length = Math.min(x.length, y.length),
+
+                reduce = (xi, idx) => {
+
+                    const yi = y[idx];
+
+                    sumX += xi;
+
+                    sumY += yi;
+
+                    sumXY += xi * yi;
+
+                    sumX2 += xi * xi;
+
+                    sumY2 += yi * yi;
+
+                };
+
+            x.forEach(reduce);
+
+            return (minLength * sumXY - sumX * sumY)/Math.sqrt((minLength * sumX2 - sumX * sumX) * (minLength * sumY2 - sumY * sumY));
+
+        }
+
+        //console.log(Pearson([20, 54, 54, 65, 45], [22, 11, 21, 34, 87]));
+
+
+        function UniqueJson(arr, key) {
+            var r = [];
+            for (var i = 0, l = arr.length; i < l; i++) {
+                for (var j = i + 1; j < l; j++) {
+                    if (key) {
+                        if (arr[i][key] === arr[j][key]) {
+                            j = ++i;
+                        }
+                    }
+                    else {
+                        if (arr[i] === arr[j]) {
+                            j = ++i;
+                        }
+                    }
+                }
+                r.push(arr[i]);
+            }
+            return r;
+        }
+
+        function compare(el1, el2, index) {
+            //json comparison
+            return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
+        }
+        function comparearrayfromlargetosmall(a, b){
+            return b[2] - a[2];
+        }
+        //按照第三列排序
+
+        function uniquearr(arr) {
+            if (!Array.isArray(arr)) {
+                console.log('type error!')
+                return
+            }
+            let res = []
+            for (let i = 0; i < arr.length; i++) {
+                if (res.indexOf(arr[i]) === -1) {
+                    res.push(arr[i])
+                }
+            }
+            return res
+        }
+
+        function diff(arr1, arr2) {
+            var newArr = [];
+            var arr3 = [];
+            for (var i = 0; i < arr1.length; i++) {
+                if (arr2.indexOf(arr1[i]) === -1)
+                    arr3.push(arr1[i]);
+            }
+            var arr4 = [];
+            for (var j = 0; j < arr2.length; j++) {
+                if (arr1.indexOf(arr2[j]) === -1)
+                    arr4.push(arr2[j]);
+            }
+            newArr = arr3.concat(arr4);
+            return newArr;
+        }
+
+        //连线动画
+        function animLink(d) {
+
+            var source = d.source.numberofexistingdata;
+            var target = d.target.numberofexistingdata;
+            var DifferentSet = Math.abs(source - target);
+            var Linkspeed = 900 - 800 * DifferentSet / source;
+
+            //console.log(Linkspeed);
+
+            d3.select(this)
+                .transition()
+                .delay(0)
+                .duration(10000)
+                .ease( "linear" )
+                .attrTween( "stroke-dashoffset", function() {
+
+                    //var i = d3.interpolateString( "1000", "0" );
+                    var i = d3.interpolateString( Linkspeed, "0" );
+                    //speed 速度
+                    return function(t) { return i(t); };
+                } )
+                .each( "end", animLink);
+        }
+
+        // 去重
+        function listRemoveRepeat(x) {
+            let result = [];
+            for (let i = 0; i < x.length; i++) {
+                let flag = true;
+                let temp = x[i];
+                for (let j = 0; j < result.length; j++) {
+                    // 普通数组 (temp === result[j])
+                    if (temp.id === result[j].id) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    result.push(temp);
+                }
+            }
+            return result;
+        }
+        // 差集
+        function listDifference(x, y) {
+            let clone = x.slice(0);
+            for (let i = 0; i < y.length; i++) {
+                let temp = y[i];
+                for (let j = 0; j < clone.length; j++) {
+                    // 普通数组 (temp === clone[j])
+                    if (temp.id === clone[j].id) {
+                        clone.splice(j, 1);
+                    }
+                }
+            }
+            return listRemoveRepeat(clone);
+        }
+        // 并集
+        function listConcat(x, y) {
+            return listRemoveRepeat(x.concat(y));
+        }
+        // 交集
+        function listIntersection(x, y) {
+            let result = [];
+            for (let i = 0; i < y.length; i++) {
+                let temp = y[i];
+                for (let j = 0; j < x.length; j++) {
+                    // 普通数组 (temp === clone[j])
+                    if (temp.id === x[j].id) {
+                        result.push(temp);
+                        break;
+                    }
+                }
+            }
+            return listRemoveRepeat(result);
+        }
+
+        // 交集非0个数
+        function listIntersection0(x, y) {
+            let result = [];
+            for (let i = 0; i < y.length; i++) {
+                let temp = y[i];
+                for (let j = 0; j < x.length; j++) {
+                    // 普通数组 (temp === clone[j])
+                    if ((temp.id === x[j].id) && ((temp.score != 0 && temp.score != 300) && (x[j].score != 0 || x[j].score != 300))) {
+                        result.push(temp);
+                        break;
+                    }
+                }
+            }
+            // var num = listRemoveRepeat(result);
+            return result.length;
+        }
+
+
+        d3.json("sorted_data_v4.json", function(error, graph) {
+            //console.log(graph);
+            var linkedByIndex = {};
+            graph.links.forEach(function(d) {
+                linkedByIndex[d.source + "," + d.target] = true;
+            });
+            //console.log(graph.nodes);
+
+            function isConnected2(a, b) {
+                let connected = false;
+                for (let i = 0;i < graph.links.length;i++) {
+                    let link = graph.links[i];
+                    if (((link.source.index === a.index) && (link.target.index === b.index)) ||
+                        ((link.target.index === a.index) && (link.source.index === b.index)) ||
+                        (a.index === b.index)) {
+                        connected = true;
+                    }
+                }
+                return connected;
+            }
+
+
+            function isConnected(a, b) {
+                return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+            }
+
+            function areConnected(a, b, d) {
+                return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+            }
+
+            function hasConnections(a) {
+                for (var property in linkedByIndex) {
+                    s = property.split(",");
+                    if ((s[0] == a.index || s[1] == a.index) && linkedByIndex[property])
+                        return true;
+                }
+                return false;
+            }
+
+            function switchprovince(a) {
+
+                var temp = "";
+                switch(a) {
+                    case 'beijing':
+                        temp = 'Beijing';
+                        break;
+                    case 'tianjin':
+                        temp = 'Tianjin';
+                        break;
+                    case 'hebei':
+                        temp = 'Heibei';
+                        break;
+                    case 'shanxi':
+                        temp = 'Shanxi';
+                        break;
+                    case 'inner mongolia':
+                        temp = 'Inner Mongolia';
+                        break;
+                    case 'shandong':
+                        temp = 'Shandong';
+                        break;
+                    case 'jiangsu':
+                        temp = 'Jiangsu';
+                        break;
+                    case 'anhui':
+                        temp = 'Anhui';
+                        break;
+                    case 'jiangxi':
+                        temp = 'Jiangxi';
+                        break;
+                    case 'fujian':
+                        temp = 'Fujian';
+                        break;
+                    case 'guangdong':
+                        temp = 'Guangdong';
+                        break;
+                    case 'guangxi':
+                        temp = 'Guangxi';
+                        break;
+                    case 'hainan':
+                        temp = 'Hainan';
+                        break;
+                    case 'henan':
+                        temp = 'Henan';
+                        break;
+                    case 'hubei':
+                        temp = 'Hubei';
+                        break;
+                    case 'hunan':
+                        temp = 'Hunan';
+                        break;
+                    case 'heilongjiang':
+                        temp = 'Heilongjiang';
+                        break;
+                    case 'jilin':
+                        temp = 'Jilin';
+                        break;
+                    case 'liaoning':
+                        temp = 'Liaoning';
+                        break;
+                    case 'shaanxi':
+                        temp = 'Shaanxi';
+                        break;
+                    case 'gansu':
+                        temp = 'Gansu';
+                        break;
+                    case 'ningxia':
+                        temp = 'Ningxia';
+                        break;
+                    case 'qinghai':
+                        temp = 'Qinghai';
+                        break;
+                    case 'xinjiang':
+                        temp = 'Xinjiang';
+                        break;
+                    case 'sichuan':
+                        temp = 'Sichuan';
+                        break;
+                    case 'guizhou':
+                        temp = 'Guizhou';
+                        break;
+                    case 'yunnan':
+                        temp = 'Jiangsu';
+                        break;
+
+                }
+                return temp;
+            }
+
+            function firstUpperCase(str) {
+                return str.toLowerCase().replace(/\b[a-z]/g,function(s){return s.toUpperCase();});
+            }
+
+            //删除数组，_arr:数组，_obj:需删除的对象
+            function removeAaary(_arr, _obj) {
+                var length = _arr.length;
+                for (var i = 0; i < length; i++) {
+                    if (_arr[i] == _obj) {
+                        if (i == 0) {
+                            _arr.shift(); //删除并返回数组的第一个元素
+                            return _arr;
+                        }
+                        else if (i == length - 1) {
+                            _arr.pop();  //删除并返回数组的最后一个元素
+                            return _arr;
+                        }
+                        else {
+                            _arr.splice(i, 1); //删除下标为i的元素
+                            return _arr;
+                        }
+                    }
+                }
+            }
+
+
+            allprovinceresults = locationmarkprovince;
+
+            var allprovinceresultslength = allprovinceresults.length * 3;
+            //console.log(allprovinceresults);
+
+            var testdata = [];
+
+            for (var i = 0; i < graph.nodes.length; i++)
+            {
+                var dataeachlevels_zhongshan = [];
+                var dataeachlevels_wuhan = [];
+                var dataeachlevels_nankai = [];
+                var middleresult_zhongshan = [];
+                var middleresult_wuhan = [];
+                var middleresult_nankai = [];
+                var temptype = "";
+                var tempuniversity = "";
+                var startparameters = 1;
+
+                var dataeachlevels = [];
+                //console.log(graph.nodes);
+
+                var numberofzhongshan = 0, numberofnankai = 0, numberofwuhan = 0;
+
+                for (var j = 0; j<graph.nodes[i].proportions.length; j++)
+                {
+                    //console.log(graph.nodes[i]);
+
+                    if (graph.nodes[i].proportions[j].scoretype == 'min')
+                    {
+
+                        //console.log(graph.nodes[i].number);
+                        temptype = graph.nodes[i].proportions[j].scoretype;
+                        tempuniversity = graph.nodes[i].proportions[j].university;
+                        if (tempuniversity == "ZhongShan")
+                        {
+                            middleresult_zhongshan.push(graph.nodes[i].proportions[j].province);
+                            dataeachlevels_zhongshan.push({
+                                'score': graph.nodes[i].proportions[j].score,
+                                'province': firstUpperCase(graph.nodes[i].proportions[j].province),
+                                'scoretype': graph.nodes[i].proportions[j].scoretype,
+                                'university': graph.nodes[i].proportions[j].university
+                                // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                                // 'end': 360 / allprovinceresultslength * startparameters
+
+                            });
+                            if ((graph.nodes[i].proportions[j].score != 0)&&(graph.nodes[i].proportions[j].score != 300))
+                            {
+                                numberofzhongshan ++;
+                            }
+
+                        }
+                        if (tempuniversity == "NanKai")
+                        {
+                            middleresult_nankai.push(graph.nodes[i].proportions[j].province);
+                            dataeachlevels_nankai.push({
+                                'score': graph.nodes[i].proportions[j].score,
+                                'province': firstUpperCase(graph.nodes[i].proportions[j].province),
+                                'scoretype': graph.nodes[i].proportions[j].scoretype,
+                                'university': graph.nodes[i].proportions[j].university
+                                // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                                // 'end': 360 / allprovinceresultslength * startparameters
+
+                            });
+                            if ((graph.nodes[i].proportions[j].score != 0)&&(graph.nodes[i].proportions[j].score != 300))
+                            {
+                                numberofnankai ++;
+                            }
+
+                        }
+                        if (tempuniversity == "WuHan")
+                        {
+                            middleresult_wuhan.push(graph.nodes[i].proportions[j].province);
+                            dataeachlevels_wuhan.push({
+                                'score': graph.nodes[i].proportions[j].score,
+                                'province': firstUpperCase(graph.nodes[i].proportions[j].province),
+                                'scoretype': graph.nodes[i].proportions[j].scoretype,
+                                'university': graph.nodes[i].proportions[j].university
+                                // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                                // 'end': 360 / allprovinceresultslength * startparameters
+
+                            });
+                            if ((graph.nodes[i].proportions[j].score != 0)&&(graph.nodes[i].proportions[j].score != 300))
+                            {
+                                numberofwuhan ++;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                //switch语句
+
+
+                var differenceset_zhongshan, differenceset_nankai, differenceset_wuhan;
+                differenceset_zhongshan= diff(middleresult_zhongshan,allprovinceresults);
+                differenceset_nankai = diff(middleresult_nankai,allprovinceresults);
+                differenceset_wuhan = diff(middleresult_wuhan,allprovinceresults);
+
+
+
+
+                if (differenceset_zhongshan.length != allprovinceresults.length)
+                {
+
+                    for (var a = 0; a < differenceset_zhongshan.length; a++)
+                    {
+                        dataeachlevels_zhongshan.push({
+                            'score': 300,
+                            'province': differenceset_zhongshan[a],
+                            'scoretype': temptype,
+                            'university': 'ZhongShan'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+                else
+                {
+                    for (var a = 0; a < allprovinceresults.length; a++)
+                    {
+                        dataeachlevels_zhongshan.push({
+                            'score': 0,
+                            'province': allprovinceresults[a],
+                            'scoretype': temptype,
+                            'university': 'ZhongShan'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+
+                if (differenceset_nankai.length !=  allprovinceresults.length)
+                {
+
+                    for (var a = 0; a < differenceset_nankai.length; a++)
+                    {
+                        dataeachlevels_nankai.push({
+                            'score': 300,
+                            'province': differenceset_nankai[a],
+                            'scoretype': temptype,
+                            'university': 'NanKai'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+                else
+                {
+                    for (var a = 0; a < allprovinceresults.length; a++)
+                    {
+                        dataeachlevels_nankai.push({
+                            'score': 0,
+                            'province': allprovinceresults[a],
+                            'scoretype': temptype,
+                            'university': 'NanKai'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+
+
+                if (differenceset_wuhan.length != allprovinceresults.length)
+                {
+
+                    //alert('1');
+                    for (var a = 0; a < differenceset_wuhan.length; a++)
+                    {
+                        dataeachlevels_wuhan.push({
+                            'score': 300,
+                            'province': differenceset_wuhan[a],
+                            'scoretype': temptype,
+                            'university': 'WuHan'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+                else
+                {
+                    for (var a = 0; a < allprovinceresults.length; a++)
+                    {
+                        dataeachlevels_wuhan.push({
+                            'score': 0,
+                            'province': allprovinceresults[a],
+                            'scoretype': temptype,
+                            'university': 'WuHan'
+                            // 'start': 360 / allprovinceresultslength * (startparameters - 1),
+                            // 'end': 360 / allprovinceresultslength * startparameters
+
+                        });
+                        // startparameters ++;
+                    }
+                }
+
+
+                // for (var j = 0; j < locationmarkprovince.length; j ++)
+                // {
+                //     for (var i = 0; i < dataeachlevels_zhongshan.length; i ++)
+                //     {
+                //         console.log(dataeachlevels_zhongshan[i]);
+                //         //if (locationmarkprovince[j] == dataeachlevels_zhongshan[])
+                //     }
+                // }
+
+
+
+                //按abcd排序省份
+                // dataeachlevels_zhongshan = dataeachlevels_zhongshan.sort(function(el1,el2){
+                //     return compare(el1, el2, "province")
+                // });
+                // dataeachlevels_nankai = dataeachlevels_nankai.sort(function(el1,el2){
+                //     return compare(el1, el2, "province")
+                // });
+                // dataeachlevels_wuhan = dataeachlevels_wuhan.sort(function(el1,el2){
+                //     return compare(el1, el2, "province")
+                // });
+
+                //需要进行分区域排序,mark here
+
+                //console.log(dataeachlevels_zhongshan);
+
+                dataeachlevels = dataeachlevels_zhongshan.concat(dataeachlevels_nankai);
+                dataeachlevels = dataeachlevels.concat(dataeachlevels_wuhan);
+
+                //console.log(dataeachlevels);
+
+                for (var b = 0; b <dataeachlevels.length; b++)
+                {
+
+                    dataeachlevels[b]['start'] = 360 / allprovinceresultslength * (startparameters - 1);
+                    dataeachlevels[b]['end'] = 360 / allprovinceresultslength * startparameters;
+
+                    startparameters ++;
+                }
+                //console.log(dataeachlevels);
+                //console.log(dataeachlevels);
+
+                //分割字符串，split string
+                var idname = graph.nodes[i].id.split(".");
+                var tempidname = idname[idname.length - 2];
+                //console.log(idname);
+                testdata.push({
+                    //'id': graph.nodes[i].id,
+                    'id': tempidname,
+                    'index': i,
+                    'proportions': dataeachlevels,
+                    'numberofexistingdata': numberofzhongshan + numberofnankai + numberofwuhan,
+                    'numberofzhongshan': numberofzhongshan,
+                    'numberofnankai': numberofnankai,
+                    'numberofwuhan': numberofwuhan
+                });
+
+            }
+            legendtempdata = testdata;
+
+            //console.log(testdata);
+            //console.log(graph.links);
+
+
+            force
+            // .nodes(graph.nodes)
+                .nodes(testdata)
+                .links(graph.links)
+                .linkDistance(function (d) {
+                    return d.length / 4;
+                })
+                .start();
+            //console.log(testdata);
+            //console.log(graph.links);
+
+            //console.log(graph.links);
+            //处理两点之间交集部分，用于映射流线速度 linespeed = []
+            //console.log(graph.links);
+            for (var i = 0; i < graph.links.length; i++)
+            {
+                linespeed.push(listIntersection0(graph.links[i].source.proportions, graph.links[i].target.proportions));
+
+            }
+            //console.log(linespeed);
+            //console.log(graph.links);
+
+            var link = g.selectAll(".link")
+                .data(graph.links)
+                .enter().append("line")
+                .attr("class", "link")
+                // .style("stroke-width",nominal_stroke)
+                .style("stroke-width", function(d) {
+                    return d.width * 1.2; })
+                .style("stroke", function(d) {
+                    if (isNumber(d.score) && d.score>=0) return color(d.score);
+                    else return default_link_color; });
+
+            link
+                .style( "stroke-dasharray", "100,10" )
+                //.style("stroke-linecap", "round")
+                .each(animLink);
+
+            var drag = force.drag()
+                .on("dragstart", dragstart)
+                .on("drag", dragged)
+                .on("dragend", dragend);
+
+            function dragstart(d) {
+                d3.select(this).classed("fixed", d.fixed = true);
+            }
+
+            function dragged(d) {
+                d3.select(this).attr("cx", d.x = d3.event.x).attr("cy", d.y = d3.event.y);
+            }
+
+            function dragend(d) {
+                d3.select(this).classed("active", false);
+                circle.style(towhite, "white");
+            }
+
+
+            function dblclick(d) {
+                d3.select(this).classed("fixed", d.fixed = false);
+            }
+
+
+            // Toggle children on click.
+            function nodeclick(temp) {
+                if (d3.event.defaultPrevented) {
+                    return;
+                }
+                //console.log(temp);
+
+                //绘制flowerchart
+
+                //var piesymbol = node.selectAll("path");
+                var piesymbol = d3.select('#node-' + temp.index).selectAll("path");
+                piesymbol.data(function(d, i) {
+                        return pie(d.proportions);
+                    })
+
+                    .enter()
+
+                    .append("path")
+
+                    .attr("d", arc)
+
+
+                    // .transition()
+                    // .duration(1000)
+                    // .ease('linear')
+
+                    //.ease("linear")
+                    // .attr("fill", function(d, i) {
+                    //     console.log(d.data);
+                    //     return color(d.data.R);
+                    // })
+                    .style(tocolor, function(d) {
+                        //console.log(d);
+                        if (d.data.score == 300)
+                            return Colorpannel[3];
+                        else if (d.data.university == 'ZhongShan')
+                            return Colorpannel[0];
+                        else if (d.data.university == 'WuHan')
+                            return Colorpannel[1];
+                        else if (d.data.university == 'NanKai')
+                            return Colorpannel[2];
+                        // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                        // else return default_node_color;
+                    })
+                    //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                    .style("stroke-width", nominal_stroke)
+
+
+                    .on("mousemove",function(d){
+                        // console.log(d.data);
+                        var mouseVal = d3.mouse(this);
+                        var tempscore;
+                        div.style("display","none");
+                        if (d.data.score == 300)
+                        {
+                            tempscore = 0;
+                        }
+                        else
+                        {
+                            tempscore = d.data.score;
+                        }
+                        div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                            .style("left", (d3.event.pageX+12) + "px")
+                            .style("top", (d3.event.pageY-10) + "px")
+                            .style("opacity", 0.8)
+                            .style("display","block");
+                    })
+                    .on("mouseout",function(){div.html(" ").style("display","none");});
+                //交互更新数据
+                //Foundpearson(d);
+
+                //console.log(piesymbol);
+
+            }
+
+            function Foundconnection(d){
+                var thisindex = d.index;
+                var temparr = {
+                    connectwith: [],
+                    connectto: []
+                };
+
+                //console.log(temparr);
+
+                for (var i = 0; i < graph.links.length; i ++) {
+                    //console.log(graph.links[i]);
+                    if (thisindex == graph.links[i].source.index)
+                    {
+                        //console.log(graph.links[i].source);
+                        temparr.connectto.push(graph.links[i].target.index);
+                    }
+                    if (thisindex == graph.links[i].target.index)
+                    {
+                        temparr.connectwith.push(graph.links[i].source.index);
+                    }
+                }
+                return temparr;
+            }
+
+            var node = g.selectAll(".node")
+            // .data(graph.nodes)
+                .data(testdata)
+                .enter()
+                .append("g")
+                .attr('id', function(d, i) {
+                    return 'node-' + d.index
+                })
+                .attr("class", "node")
+                .on("click", nodeclick)
+                .on("dblclick", dblclick)
+                .call(drag);
+
+
+            var pie = d3.layout.pie()
+            //.data(allprovinceresults)
+            // .sort(d3.descending)
+                .sort(null)
+                //默认降序排列，除非传入null
+
+
+                .value(function(d) {
+                    //console.log(d);
+                    return d.score;
+                });
+            var pieuniquezhongshan = d3.layout.pie()
+            //.data(allprovinceresults)
+            // .sort(d3.descending)
+                .sort(null)
+                //默认降序排列，除非传入null
+
+
+                .value(function(d) {
+                    if (d.university == 'ZhongShan')
+                    {
+                        //alert(d.university);
+                        return d.score;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                    //console.log(d);
+                    return d.score;
+                });
+            var pieuniquenankai = d3.layout.pie()
+            //.data(allprovinceresults)
+            // .sort(d3.descending)
+                .sort(null)
+                //默认降序排列，除非传入null
+
+
+                .value(function(d) {
+                    //console.log(d);
+                    if (d.university == 'NanKai')
+                    {
+                        return d.score;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                    return d.score;
+                });
+            var pieuniquewuhan = d3.layout.pie()
+            //.data(allprovinceresults)
+            // .sort(d3.descending)
+                .sort(null)
+                //默认降序排列，除非传入null
+
+
+                .value(function(d) {
+                    //console.log(d);
+                    if (d.university == 'WuHan')
+                    {
+                        return d.score;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                    return d.score;
+                });
+
+
+            var arc = d3.svg.arc()
+
+                .startAngle(function(d) { return d.data.start * 2 * Math.PI/360;})
+                .endAngle(function(d) { return d.data.end * 2 * Math.PI/360; })
+                .innerRadius(12)
+                .outerRadius(function (d) {
+                    return radius * (d.data.score / 300);
+
+                })
+
+                //外部高低
+                .cornerRadius(90);
+
+            var arczhongshan = d3.svg.arc()
+                .startAngle(function(d) { return d.data.start * 2 * Math.PI/360;})
+                .endAngle(function(d) { return d.data.end * 2 * Math.PI/360; })
+                .innerRadius(function (d) {
+                    if (d.data.university == 'ZhongShan')
+                    {
+                        return 12;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+                })
+                .outerRadius(function (d) {
+                    if (d.data.university == 'ZhongShan')
+                    {
+                        return radius * (d.data.score / 300);
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+
+                })
+                //外部高低
+                .cornerRadius(90);
+
+
+            var arcnankai = d3.svg.arc()
+                .startAngle(function(d) { return d.data.start * 2 * Math.PI/360;})
+                .endAngle(function(d) { return d.data.end * 2 * Math.PI/360; })
+                .innerRadius(function (d) {
+                    if (d.data.university == 'NanKai')
+                    {
+                        return 12;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+                })
+                .outerRadius(function (d) {
+                    if (d.data.university == 'NanKai')
+                    {
+                        return radius * (d.data.score / 300);
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+
+                })
+                //外部高低
+                .cornerRadius(90);
+
+            var arcwuhan = d3.svg.arc()
+                .startAngle(function(d) { return d.data.start * 2 * Math.PI/360;})
+                .endAngle(function(d) { return d.data.end * 2 * Math.PI/360; })
+                .innerRadius(function (d) {
+                    if (d.data.university == 'WuHan')
+                    {
+                        return 12;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+                })
+                .outerRadius(function (d) {
+                    if (d.data.university == 'WuHan')
+                    {
+                        return radius * (d.data.score / 300);
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+
+
+                })
+                //外部高低
+                .cornerRadius(90);
+
+
+            var div = d3.select("body")
+                .append("div")
+                .attr("class", "tooltip");
+
+
+
+            svg.selectAll("path")
+                .on("click",function(d){
+                    if (d3.event.defaultPrevented) {
+                        return;
+                    }
+                    if (d._clickid) {
+                        clearTimeout(d._clickid);
+                        d._clickid = null;
+                        // process double click
+                        // ...
+                    } else {
+                        d._clickid = setTimeout(function() {
+                            if ((FlagPieArc[d.data.ancestor + "-"+ d.data.province] == false) || ((FlagPieArc[d.data.ancestor + "-"+ d.data.province]) == undefined))
+                            {
+                                d3.select(this)
+                                    .transition()//Set transition
+                                    .style("stroke-width", nominal_stroke)
+                                    .style("stroke", "black");
+                                FlagPieArc[d.data.ancestor + "-"+ d.data.province] = true;
+                                //在此插入操作
+                                // piesymbol.each(function(o) {
+                                //     // console.log(d);
+                                //     // console.log(o);
+                                //     // if(isConnected2(d, o)) {
+                                //     //     //  如果相连，那么将所有的节点的透明度置为1
+                                //     //     d3.select('#node-' + o.index)
+                                //     //         .selectAll('path')
+                                //     //         .style("opacity", 1)
+                                //     // } else {
+                                //     //     //  如果不相连，将所有节点的透明度置为0.1
+                                //     //     d3.select('#node-' + o.index)
+                                //     //         .selectAll('path')
+                                //     //         .style("opacity", highlight_trans)
+                                //     // }
+                                // });
+
+                            }
+                            else
+                            {
+                                d3.select(this)
+                                    .transition()//Set transition
+                                    .style("stroke-width", 0)
+                                    .style("stroke", "white");
+                                FlagPieArc[d.data.ancestor + "-"+ d.data.province] = false;
+                            }
+                            d._clickid = null;
+                        }.bind(this), 250);
+                    }
+                    // console.log(ClickonPie);
+
+                });
+
+            //console.log(testdata);
+
+            var circle = node.append("path")
+
+                .attr("d", d3.svg.symbol()
+                    .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                // .type(function(d) { return d.type; }))
+                .style(tocolor, 'black')
+                //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                .style("stroke-width", nominal_stroke)
+                .style(towhite, "white")
+                .on("mousemove",function(d){
+                    // console.log(d.data);
+                    // var mouseVal = d3.mouse(this);
+                    // var tempscore;
+                    div.style("display","none");
+                    div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                        .style("left", (d3.event.pageX+12) + "px")
+                        .style("top", (d3.event.pageY-10) + "px")
+                        .style("opacity", 0.8)
+                        .style("display","block");
+                    //console.log(d);
+                })
+                .on("mouseout",function(){div.html(" ").style("display","none");});
+
+
+            //console.log(circle);
+
+            node.append("svg:text")
+                .attr("class", "nodetext")
+                .attr("text-anchor", "middle")
+                //居中
+                // .attr("dx", -10)
+                .attr("dy", ".35em")
+                .text(function(d) {
+                    return d.numberofexistingdata ;
+                })
+                .style(tocolor, 'white')
+                .on("mousemove",function(d){
+                    // console.log(d.data);
+                    // var mouseVal = d3.mouse(this);
+                    // var tempscore;
+                    div.style("display","none");
+                    div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                        .style("left", (d3.event.pageX+12) + "px")
+                        .style("top", (d3.event.pageY-10) + "px")
+                        .style("opacity", 0.8)
+                        .style("display","block");
+                    //console.log(d);
+                })
+                .on("mouseout",function(){div.html(" ").style("display","none");});
+
+
+            var text = g.selectAll(".text")
+            // .data(graph.nodes)
+
+                .data(testdata)
+                .enter().append("text")
+                .attr("dx", -10)
+                .attr("dy", ".35em")
+                .style("font-size", nominal_text_size + "px");
+
+
+            //console.log(testdata);
+
+            if (text_center)
+                text.text(function(d) {
+                    if (typeof(d.id) !== 'undefined') {
+                        return d.id;
+                    }
+                })
+                    .style("text-anchor", "middle");
+            else
+                text.attr("dx", function(d) {return (size(d.size)||nominal_base_node_size);})
+                    .text(function(d) {
+                        if (typeof(d.id) !== 'undefined') {
+                            return '\u2002'+d.id;
+                        }
+                    });
+
+            node.on("mouseover", function(d) {
+                set_highlight(d);
+            })
+                .on("mousedown", function(d) { d3.event.stopPropagation();
+                    //console.log(d);
+                    focus_node = d;
+                    set_focus(d);
+                    if (highlight_node === null) set_highlight(d)
+
+                })
+                .on("mouseout", function(d) {
+                    node.each(function(o) {
+                        d3.select('#node-' + o.index)
+                            .selectAll('path')
+                            .style("opacity", 1);
+                    });
+                    exit_highlight();
+
+                });
+
+            d3.select(window).on("mouseup",
+                function() {
+                    if (focus_node!==null)
+                    {
+                        focus_node = null;
+                        if (highlight_trans<1)
+                        {
+                            piesymbol.style("opacity", 1);
+                            circle.style("opacity", 1);
+                            text.style("opacity", 1);
+                            link.style("opacity", 1);
+                            //拖拽结束后的透明度变化
+                        }
+                    }
+
+                    if (highlight_node === null) exit_highlight();
+                });
+
+            function exit_highlight()
+            {
+                highlight_node = null;
+                if (focus_node===null)
+                {
+                    svg.style("cursor","move");
+                    if (highlight_color!="white")
+                    {
+
+                        // piesymbol.style(towhite, "white");
+                        circle.style(towhite, "white");
+                        text.style("font-weight", "normal");
+                        link.style("stroke", function(o) {return (isNumber(o.score) && o.score>=0)?color(o.score):default_link_color});
+                    }
+
+                }
+            }
+
+            function set_focus(d)
+            {
+                var temparr = [];
+                if (highlight_trans<1)  {
+
+                    //点击拖拽时响应
+                    //拖拽时循环数据中link部分，是否有链接
+                    // console.log(d3.event.subject);
+                    // // alert('1');
+                    // piesymbol.style("opacity", function(o) {
+                    //     // console.log(d);
+                    //     // console.log(o.data.ancestor);
+                    //
+                    //     return isConnected(d, o) ? 0.5 : 0.1;
+                    //
+                    // });
+                    node.each(function(o) {
+                        if(isConnected2(d, o)) {
+                            //  如果相连，那么将所有的节点的透明度置为1
+                            d3.select('#node-' + o.index)
+                                .selectAll('path')
+                                .style("opacity", 1)
+                        } else {
+                            //  如果不相连，将所有节点的透明度置为0.1
+                            d3.select('#node-' + o.index)
+                                .selectAll('path')
+                                .style("opacity", highlight_trans)
+                        }
+                    });
+
+
+                    text.style("opacity", function(o) {
+                        // console.log(isConnected(d, o));
+                        temparr.push(isConnected(d, o));
+                        return isConnected(d, o) ? 1 : highlight_trans;
+                    });
+
+
+                    link.style("opacity", function(o) {
+                        return o.source.index == d.index || o.target.index == d.index ? 1 : highlight_trans;
+                    });
+                }
+            }
+
+
+            function set_highlight(d)
+            {
+                svg.style("cursor","pointer");
+                if (focus_node!==null) d = focus_node;
+                highlight_node = d;
+                //console.log(highlight_node);
+
+                if (highlight_color!="white")
+                {
+                    node.each(function(o) {
+                        if(isConnected2(d, o)) {
+                            //  如果相连，那么将所有的节点的透明度置为1
+                            d3.select('#node-' + o.index)
+                                .selectAll('path')
+                                .style("opacity", 1)
+                        } else {
+                            //  如果不相连，将所有节点的透明度置为0.1
+                            d3.select('#node-' + o.index)
+                                .selectAll('path')
+                                .style("opacity", highlight_trans)
+                        }
+                    });
+
+                    // piesymbol.style(towhite, function(o) {
+                    //     return isConnected(d, o) ? highlight_color : "white";});
+
+                    circle.style(towhite, function(o) {
+                        return isConnected(d, o) ? highlight_color : "black";});
+                    text.style("font-weight", function(o) {
+                        return isConnected(d, o) ? "bold" : "normal";});
+                    link.style("stroke", function(o) {
+                        return o.source.index == d.index || o.target.index == d.index ? highlight_color : ((isNumber(o.score) && o.score>=0)?color(o.score):default_link_color);
+
+                    });
+                }
+            }
+
+
+
+
+            zoom.on("zoom", function() {
+
+                var stroke = nominal_stroke;
+                if (nominal_stroke*zoom.scale()>max_stroke) stroke = max_stroke/zoom.scale();
+                link.style("stroke-width", function(o) {
+                    return o.width *zoom.scale();
+                });
+
+                circle.style("stroke-width",stroke);
+
+                var base_radius = nominal_base_node_size;
+                if (nominal_base_node_size*zoom.scale()>max_base_node_size) base_radius = max_base_node_size/zoom.scale();
+                circle.attr("d", d3.svg.symbol()
+                    .size(function(d) { return Math.PI*Math.pow(size(d.size)*base_radius/nominal_base_node_size||base_radius,2); })
+                    .type(function(d) { return d.type; }));
+
+
+                //circle.attr("r", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); })
+                if (!text_center) text.attr("dx", function(d) { return (size(d.size)*base_radius/nominal_base_node_size||base_radius); });
+
+                var text_size = nominal_text_size;
+                if (nominal_text_size*zoom.scale()>max_text_size) text_size = max_text_size/zoom.scale();
+                text.style("font-size",text_size + "px");
+
+                g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+            });
+
+            svg.call(zoom).on("dblclick.zoom", null);
+
+            resize();
+            //window.focus();
+            d3.select(window).on("resize", resize).on("keydown", keydown);
+
+            force.on("tick", function() {
+
+                node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+                text.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+                link.attr("x1", function(d) { return d.source.x; })
+                    .attr("y1", function(d) { return d.source.y; })
+                    .attr("x2", function(d) { return d.target.x; })
+                    .attr("y2", function(d) { return d.target.y; });
+
+                node.attr("cx", function(d) { return d.x; })
+                    .attr("cy", function(d) { return d.y; });
+            });
+
+            function resize() {
+                var width = window.innerWidth, height = window.innerHeight;
+                svg.attr("width", width).attr("height", height);
+
+                force.size([force.size()[0]+(width-w)/zoom.scale(),force.size()[1]+(height-h)/zoom.scale()]).resume();
+                w = width;
+                h = height;
+            }
+
+
+            function keydown() {
+                if (d3.event.keyCode==32) {  force.stop();}
+                else if (d3.event.keyCode>=48 && d3.event.keyCode<=90 && !d3.event.ctrlKey && !d3.event.altKey && !d3.event.metaKey)
+                {
+                    switch (String.fromCharCode(d3.event.keyCode)) {
+                        case "C": keyc = !keyc; break;
+                        case "S": keys = !keys; break;
+                        case "T": keyt = !keyt; break;
+                        case "R": keyr = !keyr; break;
+                        case "X": keyx = !keyx; break;
+                        case "D": keyd = !keyd; break;
+                        case "L": keyl = !keyl; break;
+                        case "M": keym = !keym; break;
+                        case "H": keyh = !keyh; break;
+                        case "1": key1 = !key1; break;
+                        case "2": key2 = !key2; break;
+                        case "3": key3 = !key3; break;
+                        case "0": key0 = !key0; break;
+                    }
+
+                    link.style("display", function(d) {
+                        var flag  = vis_by_type(d.source.type)&&vis_by_type(d.target.type)&&vis_by_node_score(d.source.score)&&vis_by_node_score(d.target.score)&&vis_by_link_score(d.score);
+                        linkedByIndex[d.source.index + "," + d.target.index] = flag;
+                        return flag?"inline":"none";});
+                    node.style("display", function(d) {
+                        return (key0||hasConnections(d))&&vis_by_type(d.type)&&vis_by_node_score(d.score)?"inline":"none";});
+                    text.style("display", function(d) {
+                        return (key0||hasConnections(d))&&vis_by_type(d.type)&&vis_by_node_score(d.score)?"inline":"none";});
+
+                    if (highlight_node !== null)
+                    {
+                        if ((key0||hasConnections(highlight_node))&&vis_by_type(highlight_node.type)&&vis_by_node_score(highlight_node.score)) {
+                            if (focus_node!==null) set_focus(focus_node);
+                            set_highlight(highlight_node);
+                        }
+                        else {exit_highlight();}
+                    }
+
+                }
+            }
+
+
+            function FoundconnectionInitial(d){
+                var thisindex = d.index;
+                var temparr = {
+                    connectwith: [],
+                    connectto: []
+                };
+
+                //console.log(temparr);
+
+                for (var i = 0; i < graph.links.length; i ++) {
+                    //console.log(graph.links[i]);
+                    if (thisindex == graph.links[i].source.index)
+                    {
+                        //console.log(graph.links[i].source);
+                        temparr.connectto.push(graph.links[i].target.index);
+                    }
+                    if (thisindex == graph.links[i].target.index)
+                    {
+                        temparr.connectwith.push(graph.links[i].source.index);
+                    }
+                }
+                return temparr;
+            }
+
+            //在读取json函数内
+
+            //var templegenddata = [[],[],[]];
+            //legend
+            var legendchart = echarts.init(document.getElementById('dragwindow'));
+
+            // 指定图表的配置项和数据
+            var legendoption = {
+                // title: {
+                //     text: 'ECharts 入门示例'
+                // },
+                grid: [{
+                    top: '25%',
+                    bottom: '50%',
+                    left: 5,
+                    right: 5
+                },{
+                    top: '50%',
+                    bottom: 10,
+                    left: 10,
+                    right: 10
+                }],
+                tooltip: {
+                    confine: true
+                },
+                legend: {
+                    data:['Zhongshan', 'Nankai', 'Wuhan'],
+                    left: 5
+                    // selected: {
+                    //     'Zhongshan': false,
+                    //     'Nankai': false,
+                    //     'Wuhan': false
+                    // }
+                },
+                color: Colorpannel,
+                xAxis: {
+                    gridIndex: 0,
+                    data: ["Level 1","Level 2","Level 3"],
+
+                    axisLine: {
+                        show:false
+                    },
+                    axisLabel: {
+                        show:true,
+                        interval:0,
+                        fontSize: 11
+                    }
+                },
+                yAxis: {
+                    gridIndex: 0,
+                    show: false
+                },
+                series: [{
+                    name: 'Zhongshan',
+                    type: 'bar',
+                    color: Colorpannel[0],
+                    data: [9,41,27]
+                },{
+                    name: 'Nankai',
+                    type: 'bar',
+                    color: Colorpannel[2],
+                    data: [6,13,3]
+                },{
+                    name: 'Wuhan',
+                    type: 'bar',
+                    color: Colorpannel[1],
+                    data: [8,33,9]
+                },{
+                    name:'Pie Select',
+                    type:'pie',
+                    selectedMode: 'multiple',
+                    radius: ['10%', '60%'],
+                    center: ['50%', '80%'],
+                    label: {
+                        normal: {
+                            fontSize: 10,
+                            position: 'inner'
+                        }
+                    },
+                    itemStyle: {
+                        color: function (d) {
+                            //console.log(d);
+                            if(d.data.name == 'Zhongshan')
+                            {
+                                return Colorpannel[0];
+                            }
+                            if(d.data.name == 'Nankai')
+                            {
+                                return Colorpannel[2];
+                            }
+                            if(d.data.name == 'Wuhan')
+                            {
+                                return Colorpannel[1];
+                            }
+                        }
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:1, name:'Zhongshan'},
+                        {value:1, name:'Nankai'},
+                        {value:1, name:'Wuhan'}
+                    ]
+                }]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            legendchart.setOption(legendoption, true);
+
+            var paramsselected = [1,1,1];
+
+            var zhongshannumber = [];
+            var nankainumber = [];
+            var wuhannumber =[];
+
+            legendchart.on('legendselectchanged', function (params) {
+                //console.log(params.selected);
+
+
+                    if (params.selected.Zhongshan == true){
+                        paramsselected[0] = 1;
+                    }
+                    else
+                    {
+                        paramsselected[0] = 0;
+                    }
+                    if (params.selected.Nankai == true){
+                        paramsselected[1] = 1;
+                    }
+                    else
+                    {
+                        paramsselected[1] = 0;
+                    }
+                    if (params.selected.Wuhan == true){
+                        paramsselected[2] = 1;
+                    }
+                    else
+                    {
+                        paramsselected[2] = 0;
+                    }
+
+                //console.log(paramsselected);
+
+
+                var legenddata = found3legend();
+                function found3legend(){
+                    //console.log(legendtempdata);
+                    // console.log(legendpiestatus);
+                    var tempwholedata = [];
+
+                    for (var i = 0; i < legendtempdata.length; i ++)
+                    {
+                        var templevel = [0,0,0];
+                        for (var j=0;j<legendtempdata[i].proportions.length; j ++)
+                        {
+                            if ((legendtempdata[i].proportions[j].university == 'ZhongShan') && (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[0] = 1;
+                            }
+                            if ((legendtempdata[i].proportions[j].university == 'NanKai') && (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[1] = 1;
+                            }
+                            if ((legendtempdata[i].proportions[j].university == 'WuHan')&& (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[2] = 1;
+                            }
+
+                        }
+                        tempwholedata.push(templevel);
+                    }
+
+                    return tempwholedata;
+
+                }
+                for (var i = 0; i < legenddata.length; i ++)
+                {
+                    if (legenddata[i][0] == 1)
+                    {
+                        zhongshannumber.push(i);
+                    }
+                    if (legenddata[i][1] == 1)
+                    {
+                        nankainumber.push(i);
+                    }
+                    if (legenddata[i][2] == 1)
+                    {
+                        wuhannumber.push(i);
+                    }
+
+                }
+                var result = unionarr(paramsselected);
+
+                function unionarr(arr)
+                {
+                    //console.log(arr);
+                    var unionresult = [];
+                    if ((arr[0] == 1)&&(arr[2] == 1)&&(arr[1] == 1))
+                    {
+                        let uniontemp = zhongshannumber.concat(nankainumber.filter(v => !zhongshannumber.includes(v))); // [1,2,3,4,5]
+                        unionresult = uniontemp.concat(wuhannumber.filter(v => !uniontemp.includes(v))) // [1,2,3,4,5]
+                    }
+                    else if ((arr[0] == 1)&&(arr[2] == 0)&&(arr[1] == 1))
+                    {
+                        //alert(1);
+                        let uniontemp1 = zhongshannumber.concat(nankainumber.filter(v => !zhongshannumber.includes(v))); // [1,2,3,4,5]
+                        unionresult = uniontemp1;
+                    }
+                    else if ((arr[0] == 0)&&(arr[2] == 1)&&(arr[1] == 1))
+                    {
+                        let uniontemp2 = wuhannumber.concat(nankainumber.filter(v => !wuhannumber.includes(v))); // [1,2,3,4,5]
+                        unionresult = uniontemp2;
+                    }
+                    else if ((arr[0] == 1)&&(arr[2] == 1)&&(arr[1] == 0))
+                    {
+                        let uniontemp3 = zhongshannumber.concat(wuhannumber.filter(v => !zhongshannumber.includes(v))); // [1,2,3,4,5]
+                        unionresult = uniontemp3;
+                    }
+                    else if ((arr[0] == 1)&&(arr[2] == 0)&&(arr[1] == 0))
+                    {
+                        unionresult = zhongshannumber;
+                    }
+                    else if ((arr[0] == 0)&&(arr[2] == 1)&&(arr[1] == 0))
+                    {
+                        unionresult = wuhannumber;
+                    }
+                    else if ((arr[0] == 0)&&(arr[2] == 0)&&(arr[1] == 1))
+                    {
+                        unionresult = nankainumber;
+                    }
+                    return unionresult;
+
+                }
+
+                // let intersection = zhongshannumber.filter(v => nankainumber.includes(v)) // [2]
+                //console.log(legenddata);
+                // console.log(zhongshannumber);
+                // console.log(nankainumber);
+                // console.log(wuhannumber);
+                // console.log(result);
+                // console.log(paramsselected);
+
+
+            });
+            //console.log(paramsselected);
+
+            legendchart.on('click', function (params) {
+                //console.log(params);
+                //alert(1);
+                if (params.data.name == 'Zhongshan') {
+                    if (legendpiestatus[0] == 1)
+                    {
+                        legendpiestatus[0] = 0;
+                    }
+                    else
+                    {
+                        legendpiestatus[0] = 1;
+                    }
+                }
+                else if (params.data.name == 'Nankai'){
+                    if (legendpiestatus[1] == 1)
+                    {
+                        legendpiestatus[1] = 0;
+                    }
+                    else
+                    {
+                        legendpiestatus[1] = 1;
+                    }
+                }
+                else if (params.data.name == 'Wuhan') {
+                    if (legendpiestatus[2] == 1)
+                    {
+                        legendpiestatus[2] = 0;
+                    }
+                    else
+                    {
+                        legendpiestatus[2] = 1;
+                    }
+                }
+                //console.log(legendpiestatus);
+                var legenddata = found3legend();
+                //console.log(legenddata);
+                var legendpiedata = [];
+
+                for (var i = 0; i < legenddata.length; i ++)
+                {
+                    if (Equar(legendpiestatus, legenddata[i]))
+                    {
+                        legendpiedata.push(i);
+                    }
+                }
+
+                //console.log(testdata);
+                //获得了交互的序号
+                //console.log(legendpiedata);
+                if (savestatus.length > 0)
+                {
+                    for (j = 0 ; j < savestatus.length; j++)
+                    {
+
+                        var piesymbolformer = d3.select('#node-' + savestatus[j]).selectAll("path");
+                        //console.log(piesymbolformer);
+                        piesymbolformer.remove();
+                    }
+
+
+                }
+
+
+                for (var i = 0; i < legendpiedata.length; i++)
+                {
+                    //node.selectAll("path").remove();
+                    var piesymbol = d3.select('#node-' + legendpiedata[i]).selectAll("path");
+                    piesymbol.data(function(d, i) {
+                        return pie(d.proportions);
+                    })
+
+                        .enter()
+
+
+                        .append("path")
+
+                        .attr("d", arc)
+
+
+                        // .transition()
+                        // .duration(1000)
+                        // .ease('linear')
+
+                        //.ease("linear")
+                        // .attr("fill", function(d, i) {
+                        //     console.log(d.data);
+                        //     return color(d.data.R);
+                        // })
+                        .style(tocolor, function(d) {
+                            //console.log(d);
+                            if (d.data.score == 300)
+                                return Colorpannel[3];
+                            else if (d.data.university == 'ZhongShan')
+                                return Colorpannel[0];
+                            else if (d.data.university == 'WuHan')
+                                return Colorpannel[1];
+                            else if (d.data.university == 'NanKai')
+                                return Colorpannel[2];
+                            // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                            // else return default_node_color;
+                        })
+                        //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                        .style("stroke-width", nominal_stroke)
+
+
+                        .on("mousemove",function(d){
+                            // console.log(d.data);
+                            var mouseVal = d3.mouse(this);
+                            var tempscore;
+                            div.style("display","none");
+                            if (d.data.score == 300)
+                            {
+                                tempscore = 0;
+                            }
+                            else
+                            {
+                                tempscore = d.data.score;
+                            }
+                            div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                                .style("left", (d3.event.pageX+12) + "px")
+                                .style("top", (d3.event.pageY-10) + "px")
+                                .style("opacity", 0.8)
+                                .style("display","block");
+                        })
+                        .on("mouseout",function(){div.html(" ").style("display","none");});
+                    //交互更新数据
+                    //Foundpearson(d);
+
+                }
+
+                circle = node.append("path")
+
+                    .attr("d", d3.svg.symbol()
+                        .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                    // .type(function(d) { return d.type; }))
+                    .style(tocolor, 'black')
+                    //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                    .style("stroke-width", nominal_stroke)
+                    .style(towhite, "white")
+                    .on("mousemove",function(d){
+                        // console.log(d.data);
+                        // var mouseVal = d3.mouse(this);
+                        // var tempscore;
+                        div.style("display","none");
+                        div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                            .style("left", (d3.event.pageX+12) + "px")
+                            .style("top", (d3.event.pageY-10) + "px")
+                            .style("opacity", 0.8)
+                            .style("display","block");
+                        //console.log(d);
+                    })
+                    .on("mouseout",function(){div.html(" ").style("display","none");});
+                node.append("svg:text")
+                    .attr("class", "nodetext")
+                    .attr("text-anchor", "middle")
+                    //居中
+                    // .attr("dx", -10)
+                    .attr("dy", ".35em")
+                    .text(function(d) {
+                        return d.numberofexistingdata ;
+                    })
+                    .style(tocolor, 'white')
+                    .on("mousemove",function(d){
+                        // console.log(d.data);
+                        // var mouseVal = d3.mouse(this);
+                        // var tempscore;
+                        div.style("display","none");
+                        div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                            .style("left", (d3.event.pageX+12) + "px")
+                            .style("top", (d3.event.pageY-10) + "px")
+                            .style("opacity", 0.8)
+                            .style("display","block");
+                        //console.log(d);
+                    })
+                    .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                savestatus = legendpiedata;
+
+
+
+
+
+
+            });
+
+            function Equar(a, b) {
+                // 判断数组的长度
+                if (a.length !== b.length) {
+                    return false
+                } else {
+                    // 循环遍历数组的值进行比较
+                    for (let i = 0; i < a.length; i++) {
+                        if (a[i] !== b[i]) {
+                            return false
+                        }
+                    }
+                    return true;
+                }
+            }
+
+            function found3legend(){
+                //console.log(legendtempdata);
+                // console.log(legendpiestatus);
+                var tempwholedata = [];
+
+                for (var i = 0; i < legendtempdata.length; i ++)
+                {
+                    var templevel = [0,0,0];
+                    for (var j=0;j<legendtempdata[i].proportions.length; j ++)
+                    {
+                            if ((legendtempdata[i].proportions[j].university == 'ZhongShan') && (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[0] = 1;
+                            }
+                            if ((legendtempdata[i].proportions[j].university == 'NanKai') && (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[1] = 1;
+                            }
+                            if ((legendtempdata[i].proportions[j].university == 'WuHan')&& (legendtempdata[i].proportions[j].score != 0)){
+                                templevel[2] = 1;
+                            }
+
+                    }
+                    tempwholedata.push(templevel);
+                }
+
+                return tempwholedata;
+
+            }
+
+
+
+
+            var inputexpand= document.createElement("input");    // 生成input对象 
+            inputexpand.type = "button";                                     // 生成input类型  
+            inputexpand.value = "Expand";   // 生成input属性value 
+            inputexpand.id = "expandbutton";                                         // 赋上id ，当做参数； 
+            inputexpand.style.width = '60px';
+            // inputexpand.className = "btn btn-default";
+            // inputexpand.οnclick = function (){
+            //     console.log(1);
+            //     alert('1111');
+            // };
+
+            var container = document.getElementById('selectbotton'); //2、找到父级元素
+            container.appendChild(inputexpand); //3、在末尾中添加元素
+
+            var btn = document.getElementById("expandbutton");
+            btn.addEventListener('click',function(){
+                //console.log(paramsselected);
+                //alert("hello wrold");
+                if ((paramsselected[0] == 1) && (paramsselected[1] == 1) && (paramsselected[2] == 1))
+                {
+                    var piepoint = node.selectAll('path');
+                    piepoint.remove();
+                    var piesymbol = node.selectAll("path");
+                    piesymbol.data(function(d, i) {
+                        return pie(d.proportions);
+                    })
+
+                        .enter()
+                        .append("path")
+
+                        .attr("d", arc)
+
+                        .style(tocolor, function(d) {
+                            //console.log(d);
+                            if (d.data.score == 300)
+                                return Colorpannel[3];
+                            else if (d.data.university == 'ZhongShan')
+                                return Colorpannel[0];
+                            else if (d.data.university == 'WuHan')
+                                return Colorpannel[1];
+                            else if (d.data.university == 'NanKai')
+                                return Colorpannel[2];
+                            // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                            // else return default_node_color;
+                        })
+                        //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                        .style("stroke-width", nominal_stroke)
+
+
+                        .on("mousemove",function(d){
+                            // console.log(d.data);
+                            var mouseVal = d3.mouse(this);
+                            var tempscore;
+                            div.style("display","none");
+                            if (d.data.score == 300)
+                            {
+                                tempscore = 0;
+                            }
+                            else
+                            {
+                                tempscore = d.data.score;
+                            }
+                            div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                                .style("left", (d3.event.pageX+12) + "px")
+                                .style("top", (d3.event.pageY-10) + "px")
+                                .style("opacity", 0.8)
+                                .style("display","block");
+                        })
+                        .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                    circle = node.append("path")
+
+                        .attr("d", d3.svg.symbol()
+                            .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                        // .type(function(d) { return d.type; }))
+                        .style(tocolor, 'black')
+                        //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                        .style("stroke-width", nominal_stroke)
+                        .style(towhite, "white")
+                        .on("mousemove",function(d){
+                            // console.log(d.data);
+                            // var mouseVal = d3.mouse(this);
+                            // var tempscore;
+                            div.style("display","none");
+                            div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                .style("left", (d3.event.pageX+12) + "px")
+                                .style("top", (d3.event.pageY-10) + "px")
+                                .style("opacity", 0.8)
+                                .style("display","block");
+                            //console.log(d);
+                        })
+                        .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                    // text.remove();
+
+                    node.append("svg:text")
+                        .attr("class", "nodetext")
+                        .attr("text-anchor", "middle")
+                        //居中
+                        // .attr("dx", -10)
+                        .attr("dy", ".35em")
+                        .text(function(d) {
+                            return d.numberofexistingdata ;
+                        })
+                        .style(tocolor, 'white')
+                        .on("mousemove",function(d){
+                            // console.log(d.data);
+                            // var mouseVal = d3.mouse(this);
+                            // var tempscore;
+                            div.style("display","none");
+                            div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                .style("left", (d3.event.pageX+12) + "px")
+                                .style("top", (d3.event.pageY-10) + "px")
+                                .style("opacity", 0.8)
+                                .style("display","block");
+                            //console.log(d);
+                        })
+                        .on("mouseout",function(){div.html(" ").style("display","none");});
+
+
+                }
+                else if ((paramsselected[0] == 1) && (paramsselected[1] == 0) && (paramsselected[2] == 0)){
+                    //alert(1);
+                    var piepoint = node.selectAll('path');
+                    piepoint.remove();
+                    //思路是先清除所有点和连线，重新绘制unique点和连线
+                    // link.remove();
+                    // link = g.selectAll(".link")
+                    //     .data(graph.links)
+                    //     .enter().append("line")
+                    //     .attr("class", "link")
+                    //     // .style("stroke-width",nominal_stroke)
+                    //     .style("stroke-width", function(d) {
+                    //         return d.width * 1.2; })
+                    //     .style("stroke", function(d) {
+                    //         if (isNumber(d.score) && d.score>=0) return color(d.score);
+                    //         else return default_link_color; });
+                    //
+                    // link
+                    //     .style( "stroke-dasharray", "100,10" )
+                    //     //.style("stroke-linecap", "round")
+                    //     .each(animLink);
+                    //console.log(link);
+
+
+                    for (var i = 0; i < zhongshannumber.length; i++)
+                    {
+                        var piesymbol = d3.select('#node-' + zhongshannumber[i]).selectAll("path");
+                        //console.log(zhongshannumber);
+                        piesymbol.data(function(d, i) {
+                            return pieuniquezhongshan(d.proportions);
+                        })
+                            .enter()
+
+
+                            .append("path")
+
+                            .attr("d", arczhongshan)
+
+
+                            // .transition()
+                            // .duration(1000)
+                            // .ease('linear')
+
+                            //.ease("linear")
+                            // .attr("fill", function(d, i) {
+                            //     console.log(d.data);
+                            //     return color(d.data.R);
+                            // })
+                            .style(tocolor, function(d) {
+                                //console.log(d);
+                                if (d.data.score == 300)
+                                    return Colorpannel[3];
+                                else if (d.data.university == 'ZhongShan')
+                                    return Colorpannel[0];
+                                else if (d.data.university == 'WuHan')
+                                    return Colorpannel[1];
+                                else if (d.data.university == 'NanKai')
+                                    return Colorpannel[2];
+                                // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                                // else return default_node_color;
+                            })
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+
+
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                var mouseVal = d3.mouse(this);
+                                var tempscore;
+                                div.style("display","none");
+                                if (d.data.score == 300)
+                                {
+                                    tempscore = 0;
+                                }
+                                else
+                                {
+                                    tempscore = d.data.score;
+                                }
+                                div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                        circle = d3.select('#node-' + zhongshannumber[i]).append("path")
+
+                            .attr("d", d3.svg.symbol()
+                                .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                            // .type(function(d) { return d.type; }))
+                            .style(tocolor, 'black')
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+                            .style(towhite, "white")
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                        d3.select('#node-' + zhongshannumber[i]).append("svg:text")
+                            .attr("class", "nodetext")
+                            .attr("text-anchor", "middle")
+                            //居中
+                            // .attr("dx", -10)
+                            .attr("dy", ".35em")
+                            .text(function(d) {
+                                return d.numberofexistingdata ;
+                            })
+                            .style(tocolor, 'white')
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                        //console.log(piesymbol);
+                    }
+
+                }
+                else if ((paramsselected[0] == 0) && (paramsselected[1] == 1) && (paramsselected[2] == 0)){
+
+                    var piepoint = node.selectAll('path');
+                    piepoint.remove();
+
+                    for (var i = 0; i < nankainumber.length; i++)
+                    {
+                        var piesymbol = d3.select('#node-' + nankainumber[i]).selectAll("path");
+                        piesymbol.data(function(d, i) {
+                            return pieuniquenankai(d.proportions);
+                        })
+                            .enter()
+
+
+                            .append("path")
+
+                            .attr("d", arcnankai)
+
+
+                            // .transition()
+                            // .duration(1000)
+                            // .ease('linear')
+
+                            //.ease("linear")
+                            // .attr("fill", function(d, i) {
+                            //     console.log(d.data);
+                            //     return color(d.data.R);
+                            // })
+                            .style(tocolor, function(d) {
+                                //console.log(d);
+                                if (d.data.score == 300)
+                                    return Colorpannel[3];
+                                else if (d.data.university == 'ZhongShan')
+                                    return Colorpannel[0];
+                                else if (d.data.university == 'WuHan')
+                                    return Colorpannel[1];
+                                else if (d.data.university == 'NanKai')
+                                    return Colorpannel[2];
+                                // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                                // else return default_node_color;
+                            })
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+
+
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                var mouseVal = d3.mouse(this);
+                                var tempscore;
+                                div.style("display","none");
+                                if (d.data.score == 300)
+                                {
+                                    tempscore = 0;
+                                }
+                                else
+                                {
+                                    tempscore = d.data.score;
+                                }
+                                div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                        circle = d3.select('#node-' + nankainumber[i]).append("path")
+
+                            .attr("d", d3.svg.symbol()
+                                .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                            // .type(function(d) { return d.type; }))
+                            .style(tocolor, 'black')
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+                            .style(towhite, "white")
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                        d3.select('#node-' + nankainumber[i]).append("svg:text")
+                            .attr("class", "nodetext")
+                            .attr("text-anchor", "middle")
+                            //居中
+                            // .attr("dx", -10)
+                            .attr("dy", ".35em")
+                            .text(function(d) {
+                                return d.numberofexistingdata ;
+                            })
+                            .style(tocolor, 'white')
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                    }
+
+                }
+                else if ((paramsselected[0] == 0) && (paramsselected[1] == 0) && (paramsselected[2] == 1)){
+                    var piepoint = node.selectAll('path');
+                    piepoint.remove();
+
+                    for (var i = 0; i < wuhannumber.length; i++)
+                    {
+                        var piesymbol = d3.select('#node-' + wuhannumber[i]).selectAll("path");
+                        piesymbol.data(function(d, i) {
+                            return pieuniquewuhan(d.proportions);
+                        })
+                            .enter()
+
+
+                            .append("path")
+
+                            .attr("d", arcwuhan)
+
+                            .style(tocolor, function(d) {
+                                //console.log(d);
+                                if (d.data.score == 300)
+                                    return Colorpannel[3];
+                                else if (d.data.university == 'ZhongShan')
+                                    return Colorpannel[0];
+                                else if (d.data.university == 'WuHan')
+                                    return Colorpannel[1];
+                                else if (d.data.university == 'NanKai')
+                                    return Colorpannel[2];
+                                // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+                                // else return default_node_color;
+                            })
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+
+
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                var mouseVal = d3.mouse(this);
+                                var tempscore;
+                                div.style("display","none");
+                                if (d.data.score == 300)
+                                {
+                                    tempscore = 0;
+                                }
+                                else
+                                {
+                                    tempscore = d.data.score;
+                                }
+                                div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                        circle = d3.select('#node-' + wuhannumber[i]).append("path")
+
+                            .attr("d", d3.svg.symbol()
+                                .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                            // .type(function(d) { return d.type; }))
+                            .style(tocolor, 'black')
+                            //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                            .style("stroke-width", nominal_stroke)
+                            .style(towhite, "white")
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+                        d3.select('#node-' + wuhannumber[i]).append("svg:text")
+                            .attr("class", "nodetext")
+                            .attr("text-anchor", "middle")
+                            //居中
+                            // .attr("dx", -10)
+                            .attr("dy", ".35em")
+                            .text(function(d) {
+                                return d.numberofexistingdata ;
+                            })
+                            .style(tocolor, 'white')
+                            .on("mousemove",function(d){
+                                // console.log(d.data);
+                                // var mouseVal = d3.mouse(this);
+                                // var tempscore;
+                                div.style("display","none");
+                                div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                                    .style("left", (d3.event.pageX+12) + "px")
+                                    .style("top", (d3.event.pageY-10) + "px")
+                                    .style("opacity", 0.8)
+                                    .style("display","block");
+                                //console.log(d);
+                            })
+                            .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                    }
+
+                }
+
+            },false);
+
+
+            var inputreset= document.createElement("input");    // 生成input对象 
+            inputreset.type = "button";                                     // 生成input类型  
+            inputreset.value = "Reset";   // 生成input属性value 
+            inputreset.id = "resetbutton";                                         // 赋上id ，当做参数； 
+            inputreset.style.width = '60px';
+            // inputexpand.className = "btn btn-default";
+            // inputexpand.οnclick = function (){
+            //     console.log(1);
+            //     alert('1111');
+            // };
+
+            var container0= document.getElementById('selectbotton'); //2、找到父级元素
+            container0.appendChild(inputreset); //3、在末尾中添加元素
+
+            var btn0 = document.getElementById("resetbutton");
+            btn0.addEventListener('click',function(){
+
+                legendpiestatus = [0,0,0]
+                var Legendchart = echarts.getInstanceByDom(document.getElementById('dragwindow'));
+                var LegendchartOption = Legendchart.getOption();
+                Legendchart.clear();
+                Legendchart.setOption(LegendchartOption, true);
+                console.log(LegendchartOption);
+
+                var nodetemp = g.selectAll(".node");
+                nodetemp.remove();
+                // link.remove();
+                //
+                // link = g.selectAll(".link")
+                //     .data(graph.links)
+                //     .enter().append("line")
+                //     .attr("class", "link")
+                //     // .style("stroke-width",nominal_stroke)
+                //     .style("stroke-width", function(d) {
+                //         return d.width * 1.2; })
+                //     .style("stroke", function(d) {
+                //         if (isNumber(d.score) && d.score>=0) return color(d.score);
+                //         else return default_link_color; });
+                //
+                // link
+                //     .style( "stroke-dasharray", "100,10" )
+                //     //.style("stroke-linecap", "round")
+                //     .each(animLink);
+
+
+                //circle.remove();
+
+                // link = g.selectAll(".link");
+
+                node = g.selectAll(".node")
+                // .data(graph.nodes)
+                    .data(testdata)
+                    .enter()
+                    .append("g")
+                    .attr('id', function(d, i) {
+                        return 'node-' + d.index
+                    })
+                    .attr("class", "node")
+                    .on("click", nodeclick)
+                    .on("dblclick", dblclick)
+                    .call(drag);
+
+
+                circle = node.append("path")
+
+                    .attr("d", d3.svg.symbol()
+                        .size(function(d) { return Math.PI*Math.pow(size(d.size)||nominal_base_node_size,2); }))
+                    // .type(function(d) { return d.type; }))
+                    .style(tocolor, 'black')
+                    //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+                    .style("stroke-width", nominal_stroke)
+                    .style(towhite, "white")
+                    .on("mousemove",function(d){
+                        // console.log(d.data);
+                        // var mouseVal = d3.mouse(this);
+                        // var tempscore;
+                        div.style("display","none");
+                        div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                            .style("left", (d3.event.pageX+12) + "px")
+                            .style("top", (d3.event.pageY-10) + "px")
+                            .style("opacity", 0.8)
+                            .style("display","block");
+                        //console.log(d);
+                    })
+                    .on("mouseout",function(){div.html(" ").style("display","none");});
+
+                // text.remove();
+
+                node.append("svg:text")
+                    .attr("class", "nodetext")
+                    .attr("text-anchor", "middle")
+                    //居中
+                    // .attr("dx", -10)
+                    .attr("dy", ".35em")
+                    .text(function(d) {
+                        return d.numberofexistingdata ;
+                    })
+                    .style(tocolor, 'white')
+                    .on("mousemove",function(d){
+                        // console.log(d.data);
+                        // var mouseVal = d3.mouse(this);
+                        // var tempscore;
+                        div.style("display","none");
+                        div.html("ZhongShan:"+d.numberofzhongshan+"</br>"+"NanKai:"+d.numberofnankai+"</br>"+"WuHan:"+ d.numberofwuhan)
+                            .style("left", (d3.event.pageX+12) + "px")
+                            .style("top", (d3.event.pageY-10) + "px")
+                            .style("opacity", 0.8)
+                            .style("display","block");
+                        //console.log(d);
+                    })
+                    .on("mouseout",function(){div.html(" ").style("display","none");});
+
+
+                // text = g.selectAll(".text")
+                // // .data(graph.nodes)
+                //
+                //     .data(testdata)
+                //     .enter().append("text")
+                //     .attr("dx", -10)
+                //     .attr("dy", ".35em")
+                //     .style("font-size", nominal_text_size + "px");
+
+
+                //console.log(testdata);
+
+
+            },false);
+
+
+
+        });
+
+        function vis_by_type(type)
+        {
+            switch (type) {
+                case "circle": return keyc;
+                case "square": return keys;
+                case "triangle-up": return keyt;
+                case "diamond": return keyr;
+                case "cross": return keyx;
+                case "triangle-down": return keyd;
+                default: return true;
+            }
+        }
+        function vis_by_node_score(score)
+        {
+            if (isNumber(score))
+            {
+                if (score>=0.666) return keyh;
+                else if (score>=0.333) return keym;
+                else if (score>=0) return keyl;
+            }
+            return true;
+        }
+
+        function vis_by_link_score(score)
+        {
+            if (isNumber(score))
+            {
+                if (score>=0.666) return key3;
+                else if (score>=0.333) return key2;
+                else if (score>=0) return key1;
+            }
+            return true;
+        }
+
+        function isNumber(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+
+        // function Expandall() {
+        //     alert('1');
+        //     var piesymbol = d3.selectAll(node).selectAll("path");
+        //     piesymbol.data(function(d, i) {
+        //         return pie(d.proportions);
+        //     })
+        //
+        //         .enter()
+        //
+        //
+        //         .append("path")
+        //
+        //         .attr("d", arc)
+        //
+        //
+        //         // .transition()
+        //         // .duration(1000)
+        //         // .ease('linear')
+        //
+        //         //.ease("linear")
+        //         // .attr("fill", function(d, i) {
+        //         //     console.log(d.data);
+        //         //     return color(d.data.R);
+        //         // })
+        //         .style(tocolor, function(d) {
+        //             //console.log(d);
+        //             if (d.data.score == 0)
+        //                 return Colorpannel[3];
+        //             else if (d.data.university == 'ZhongShan')
+        //                 return Colorpannel[0];
+        //             else if (d.data.university == 'WuHan')
+        //                 return Colorpannel[1];
+        //             else if (d.data.university == 'NanKai')
+        //                 return Colorpannel[2];
+        //             // if (isNumber(d.data.R) && d.data.R>=0) return color(d.data.R);
+        //             // else return default_node_color;
+        //         })
+        //         //.attr("r", function(d) { return size(d.size)||nominal_base_node_size; })
+        //         .style("stroke-width", nominal_stroke)
+        //
+        //
+        //         .on("mousemove",function(d){
+        //             // console.log(d.data);
+        //             var mouseVal = d3.mouse(this);
+        //             var tempscore;
+        //             div.style("display","none");
+        //             if (d.data.score == 300)
+        //             {
+        //                 tempscore = 0;
+        //             }
+        //             else
+        //             {
+        //                 tempscore = d.data.score;
+        //             }
+        //             div.html("Category:"+d.data.scoretype+"</br>"+"Location:"+d.data.province+"</br>"+"Score:"+ tempscore +"</br>"+"University:"+ d.data.university)
+        //                 .style("left", (d3.event.pageX+12) + "px")
+        //                 .style("top", (d3.event.pageY-10) + "px")
+        //                 .style("opacity", 0.8)
+        //                 .style("display","block");
+        //         })
+        //         .on("mouseout",function(){div.html(" ").style("display","none");});
+        // }
+        //
+        // function Reset() {
+        //     alert('2');
+        //     Resetind3();
+        //
+        //
+        // }
+
+
+    </script>
+
+</body>
+
+
+</html>

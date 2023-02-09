@@ -1,0 +1,6416 @@
+{
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "length": 1200,
+            "width": 12
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "length": 1200,
+            "width": 12
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "length": 1200,
+            "width": 12
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "length": 1200,
+            "width": 12
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 6,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 7,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 8,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 9,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 10,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 11,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 12,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 1,
+            "target": 13,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 14,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 15,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 16,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 17,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 18,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 19,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 20,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 21,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 22,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 23,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 2,
+            "target": 24,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 25,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 26,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 27,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 28,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 29,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 3,
+            "target": 30,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 4,
+            "target": 31,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 4,
+            "target": 32,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 4,
+            "target": 33,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 4,
+            "target": 34,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 4,
+            "target": 35,
+            "length": 800,
+            "width": 8
+        },
+        {
+            "source": 5,
+            "target": 36,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 37,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 38,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 39,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 40,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 41,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 5,
+            "target": 42,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 6,
+            "target": 43,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 6,
+            "target": 44,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 6,
+            "target": 45,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 6,
+            "target": 46,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 47,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 48,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 49,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 50,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 51,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 7,
+            "target": 52,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 8,
+            "target": 53,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 8,
+            "target": 54,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 9,
+            "target": 55,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 9,
+            "target": 56,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 10,
+            "target": 57,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 10,
+            "target": 58,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 11,
+            "target": 59,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 11,
+            "target": 60,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 11,
+            "target": 61,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 12,
+            "target": 62,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 13,
+            "target": 63,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 14,
+            "target": 64,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 14,
+            "target": 65,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 14,
+            "target": 66,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 14,
+            "target": 67,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 15,
+            "target": 68,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 15,
+            "target": 69,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 15,
+            "target": 70,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 15,
+            "target": 71,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 16,
+            "target": 72,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 16,
+            "target": 73,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 16,
+            "target": 74,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 17,
+            "target": 75,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 17,
+            "target": 76,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 17,
+            "target": 77,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 18,
+            "target": 78,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 18,
+            "target": 79,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 18,
+            "target": 80,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 19,
+            "target": 81,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 19,
+            "target": 82,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 20,
+            "target": 83,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 20,
+            "target": 84,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 20,
+            "target": 85,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 21,
+            "target": 86,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 21,
+            "target": 87,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 22,
+            "target": 88,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 23,
+            "target": 89,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 24,
+            "target": 90,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 24,
+            "target": 91,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 92,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 93,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 94,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 95,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 96,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 97,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 98,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 99,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 25,
+            "target": 100,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 26,
+            "target": 101,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 26,
+            "target": 102,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 26,
+            "target": 103,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 26,
+            "target": 104,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 27,
+            "target": 105,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 27,
+            "target": 106,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 28,
+            "target": 107,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 29,
+            "target": 108,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 29,
+            "target": 109,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 29,
+            "target": 110,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 30,
+            "target": 111,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 31,
+            "target": 112,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 31,
+            "target": 113,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 31,
+            "target": 114,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 31,
+            "target": 115,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 32,
+            "target": 116,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 32,
+            "target": 117,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 32,
+            "target": 118,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 33,
+            "target": 119,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 34,
+            "target": 120,
+            "length": 400,
+            "width": 4
+        },
+        {
+            "source": 35,
+            "target": 121,
+            "length": 400,
+            "width": 4
+        }
+    ],
+
+    "nodes": [
+        {
+            "number": 0,
+            "id": "CarMarket.",
+            "proportions": [
+                {
+                    "amount": 73,
+                    "brand": "Audi",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 77,
+                    "brand": "BMW",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 53,
+                    "brand": "Ford",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 39,
+                    "brand": "Subaru",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 104,
+                    "brand": "Audi",
+                    "country": "China"
+                },
+                {
+                    "amount": 111,
+                    "brand": "BMW",
+                    "country": "China"
+                },
+                {
+                    "amount": 69,
+                    "brand": "Ford",
+                    "country": "China"
+                },
+                {
+                    "amount": 17,
+                    "brand": "Subaru",
+                    "country": "China"
+                },
+                {
+                    "amount": 57,
+                    "brand": "Audi",
+                    "country": "USA"
+                },
+                {
+                    "amount": 87,
+                    "brand": "BMW",
+                    "country": "USA"
+                },
+                {
+                    "amount": 80,
+                    "brand": "Ford",
+                    "country": "USA"
+                },
+                {
+                    "amount": 40,
+                    "brand": "Subaru",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 1,
+            "id": "CarMarket.Audi.",
+            "proportions": [
+                {
+                    "amount": 22,
+                    "type": "SUV",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 32,
+                    "type": "SUV",
+                    "country": "China"
+                },
+                {
+                    "amount": 13,
+                    "type": "SUV",
+                    "country": "USA"
+                },
+                {
+                    "amount": 15,
+                    "type": "Sportback",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 12,
+                    "type": "Sportback",
+                    "country": "China"
+                },
+                {
+                    "amount": 7,
+                    "type": "Sportback",
+                    "country": "USA"
+                },
+                {
+                    "amount": 16,
+                    "type": "Sedan",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 34,
+                    "type": "Sedan",
+                    "country": "China"
+                },
+                {
+                    "amount": 14,
+                    "type": "Sedan",
+                    "country": "USA"
+                },
+                {
+                    "amount": 7,
+                    "type": "Cabriolet",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "type": "Cabriolet",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "type": "Cabriolet",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "type": "Avant",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "type": "Avant",
+                    "country": "China"
+                },
+                {
+                    "amount": 1,
+                    "type": "Avant",
+                    "country": "USA"
+                },
+                {
+                    "amount": 1,
+                    "type": "Allroad",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "type": "Allroad",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "type": "Allroad",
+                    "country": "USA"
+                },
+                {
+                    "amount": 7,
+                    "type": "Coupe",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 10,
+                    "type": "Coupe",
+                    "country": "China"
+                },
+                {
+                    "amount": 10,
+                    "type": "Coupe",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "type": "Roadster",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "type": "Roadster",
+                    "country": "China"
+                },
+                {
+                    "amount": 1,
+                    "type": "Roadster",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "type": "Spyder",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "type": "Spyder",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "type": "Spyder",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "id": "CarMarket.BMW.",
+            "proportions": [
+                {
+                    "amount": 15,
+                    "type": "Sedan",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 41,
+                    "type": "Sedan",
+                    "country": "China"
+                },
+                {
+                    "amount": 21,
+                    "type": "Sedan",
+                    "country": "USA"
+                },
+                {
+                    "amount": 18,
+                    "type": "SUV",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 23,
+                    "type": "SUV",
+                    "country": "China"
+                },
+                {
+                    "amount": 17,
+                    "type": "SUV",
+                    "country": "USA"
+                },
+                {
+                    "amount": 11,
+                    "type": "SAC",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 12,
+                    "type": "SAC",
+                    "country": "China"
+                },
+                {
+                    "amount": 12,
+                    "type": "SAC",
+                    "country": "USA"
+                },
+                {
+                    "amount": 8,
+                    "type": "Coupe",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 11,
+                    "type": "Coupe",
+                    "country": "China"
+                },
+                {
+                    "amount": 15,
+                    "type": "Coupe",
+                    "country": "USA"
+                },
+                {
+                    "amount": 8,
+                    "type": "Convertible",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 7,
+                    "type": "Convertible",
+                    "country": "China"
+                },
+                {
+                    "amount": 14,
+                    "type": "Convertible",
+                    "country": "USA"
+                },
+                {
+                    "amount": 1,
+                    "type": "Gran Turismo",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "type": "Gran Turismo",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "type": "Gran Turismo",
+                    "country": "USA"
+                },
+                {
+                    "amount": 15,
+                    "type": "Gran Coupe",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "type": "Gran Coupe",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "type": "Gran Coupe",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "type": "Touring",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "type": "Touring",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "type": "Touring",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "type": "Wagon",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "type": "Wagon",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "type": "Wagon",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "type": "Roadster",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "type": "Roadster",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "type": "Roadster",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "type": "BMW i",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "type": "BMW i",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "type": "BMW i",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "id": "CarMarket.Ford.",
+            "proportions": [
+                {
+                    "amount": 24,
+                    "type": "SUV",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 30,
+                    "type": "SUV",
+                    "country": "China"
+                },
+                {
+                    "amount": 33,
+                    "type": "SUV",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "type": "Sedan",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 16,
+                    "type": "Sedan",
+                    "country": "China"
+                },
+                {
+                    "amount": 8,
+                    "type": "Sedan",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "type": "Hatchback",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "type": "Hatchback",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "type": "Hatchback",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "type": "Fastback",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "type": "Fastback",
+                    "country": "China"
+                },
+                {
+                    "amount": 8,
+                    "type": "Fastback",
+                    "country": "USA"
+                },
+                {
+                    "amount": 9,
+                    "type": "Pickup",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "type": "Pickup",
+                    "country": "China"
+                },
+                {
+                    "amount": 28,
+                    "type": "Pickup",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "type": "Convertible",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "type": "Convertible",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "type": "Convertible",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 4,
+            "id": "CarMarket.Subaru.",
+            "proportions": [
+                {
+                    "amount": 17,
+                    "type": "SUV",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 12,
+                    "type": "SUV",
+                    "country": "China"
+                },
+                {
+                    "amount": 19,
+                    "type": "SUV",
+                    "country": "USA"
+                },
+                {
+                    "amount": 12,
+                    "type": "Sedan",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "type": "Sedan",
+                    "country": "China"
+                },
+                {
+                    "amount": 15,
+                    "type": "Sedan",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "type": "Coupe",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "type": "Coupe",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "type": "Coupe",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "type": "Hatchback",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "type": "Hatchback",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "type": "Hatchback",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "type": "Wagon",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "type": "Wagon",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "type": "Wagon",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 5,
+            "id": "CarMarket.Audi.SUV.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "e-tron",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "e-tron",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "e-tron",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "Q2",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Q2",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Q2",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Q2L",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "Q2L",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Q2L",
+                    "country": "USA"
+                },
+                {
+                    "amount": 7,
+                    "model": "Q3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 8,
+                    "model": "Q3",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "Q3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "Q5",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 7,
+                    "model": "Q5",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "Q5",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "Q7",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "Q7",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "Q7",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "Q8",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "Q8",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "Q8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 6,
+            "id": "CarMarket.Audi.Sportback.",
+            "proportions": [
+                {
+                    "amount": 3,
+                    "model": "A1",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "A1",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "A1",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "model": "A3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "A3",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "A3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "A5",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "A5",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "A5",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "A7",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "A7",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "A7",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 7,
+            "id": "CarMarket.Audi.Sedan.",
+            "proportions": [
+                {
+                    "amount": 5,
+                    "model": "A3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "A3",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "A3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "A4",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 10,
+                    "model": "A4",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "A4",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "A6",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "A6",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "A6",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "A6L",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 14,
+                    "model": "A6L",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "A6L",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "A8",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "A8",
+                    "country": "China"
+                },
+                {
+                    "amount": 1,
+                    "model": "A8",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "A8L",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "A8L",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "A8L",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 8,
+            "id": "CarMarket.Audi.Cabriolet.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "A3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "A3",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "A3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "A5",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "A5",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "A5",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 9,
+            "id": "CarMarket.Audi.Avant.",
+            "proportions": [
+                {
+                    "amount": 5,
+                    "model": "A4",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "A4",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "A4",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "A6",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "A6",
+                    "country": "China"
+                },
+                {
+                    "amount": 1,
+                    "model": "A6",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 10,
+            "id": "CarMarket.Audi.Allroad.",
+            "proportions": [
+                {
+                    "amount": 1,
+                    "model": "A4",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "A4",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "A4",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "A6",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "A6",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "A6",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 11,
+            "id": "CarMarket.Audi.Coupe.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "A5",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "A5",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "A5",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "TT",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "TT",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "TT",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "R8",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "R8",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "R8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 12,
+            "id": "CarMarket.Audi.Roadster.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "TT",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "TT",
+                    "country": "China"
+                },
+                {
+                    "amount": 1,
+                    "model": "TT",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 13,
+            "id": "CarMarket.Audi.Spyder.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "R8",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "R8",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "R8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 14,
+            "id": "CarMarket.BMW.Sedan.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "1 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "1 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "1 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "3 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 9,
+                    "model": "3 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "3 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "5 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 16,
+                    "model": "5 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 9,
+                    "model": "5 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "model": "7 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 12,
+                    "model": "7 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "7 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 15,
+            "id": "CarMarket.BMW.SUV.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "X1",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "X1",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "X1",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "X3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "X3",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "X3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "X5",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "X5",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "X5",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "X7",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "X7",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "X7",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 16,
+            "id": "CarMarket.BMW.SAC.",
+            "proportions": [
+                {
+                    "amount": 3,
+                    "model": "X2",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "X2",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "X2",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "X4",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "X4",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "X4",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "X6",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "X6",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "X6",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 17,
+            "id": "CarMarket.BMW.Coupe.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "2 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "2 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "2 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 1,
+                    "model": "4 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "4 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "4 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "8 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "8 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "8 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 18,
+            "id": "CarMarket.BMW.Convertible.",
+            "proportions": [
+                {
+                    "amount": 2,
+                    "model": "2 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "2 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "2 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 4,
+                    "model": "4 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "4 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "4 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "8 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "8 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "8 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 19,
+            "id": "CarMarket.BMW.Gran Turismo.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "3 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "3 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "3 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 1,
+                    "model": "6 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "6 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "6 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 20,
+            "id": "CarMarket.BMW.Gran Coupe.",
+            "proportions": [
+                {
+                    "amount": 2,
+                    "model": "2 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "2 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "2 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "4 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "4 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "4 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "8 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "8 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "8 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 21,
+            "id":"CarMarket.BMW.Touring.",
+            "proportions": [
+                {
+                    "amount": 1,
+                    "model": "3 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "3 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "3 Series",
+                    "country": "USA"
+                },
+                {
+                    "amount": 1,
+                    "model": "5 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "5 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "5 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 22,
+            "id":"CarMarket.BMW.Wagon.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "2 Series",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "2 Series",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "2 Series",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 23,
+            "id":"CarMarket.BMW.Roadster.",
+            "proportions": [
+                {
+                    "amount": 3,
+                    "model": "Z4",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "Z4",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "Z4",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 24,
+            "id":"CarMarket.BMW.BMW i.",
+            "proportions": [
+                {
+                    "amount": 1,
+                    "model": "i3",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "i3",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "i3",
+                    "country": "USA"
+                },
+                {
+                    "amount": 2,
+                    "model": "i8",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "i8",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "i8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 25,
+            "id": "CarMarket.Ford.SUV.",
+            "proportions": [
+                {
+                    "amount": 3,
+                    "model": "Puma",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Puma",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Puma",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "New Escape",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "New Escape",
+                    "country": "China"
+                },
+                {
+                    "amount": 9,
+                    "model": "New Escape",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "EcoSport",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "EcoSport",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "EcoSport",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "Endura",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Endura",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "Endura",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "Everest",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 8,
+                    "model": "Everest",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Everest",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Sharp",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 7,
+                    "model": "Sharp",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Sharp",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Explorer",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "Explorer",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "Explorer",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Flex",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Flex",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "Flex",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Expedition",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Expedition",
+                    "country": "China"
+                },
+                {
+                    "amount": 8,
+                    "model": "Expedition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 26,
+            "id": "CarMarket.Ford.Sedan.",
+            "proportions": [
+                {
+                    "amount": 0,
+                    "model": "Forex",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "Forex",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Forex",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Fox",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "Fox",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Fox",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Mondeo",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "Mondeo",
+                    "country": "China"
+                },
+                {
+                    "amount": 8,
+                    "model": "Mondeo",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Taurus",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "Taurus",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Taurus",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 27,
+            "id": "CarMarket.Ford.Hatchback.",
+            "proportions": [
+                {
+                    "amount": 1,
+                    "model": "Fiesta",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Fiesta",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Fiesta",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "model": "Focus",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 6,
+                    "model": "Focus",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Focus",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 28,
+            "id": "CarMarket.Ford.Fastback.",
+            "proportions": [
+                {
+                    "amount": 3,
+                    "model": "Mustang",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 1,
+                    "model": "Mustang",
+                    "country": "China"
+                },
+                {
+                    "amount": 8,
+                    "model": "Mustang",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 29,
+            "id": "CarMarket.Ford.Pickup.",
+            "proportions": [
+                {
+                    "amount": 9,
+                    "model": "Ranger",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Ranger",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "Ranger",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "F-150",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "F-150",
+                    "country": "China"
+                },
+                {
+                    "amount": 7,
+                    "model": "F-150",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Super Duty",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Super Duty",
+                    "country": "China"
+                },
+                {
+                    "amount": 18,
+                    "model": "Super Duty",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 30,
+            "id": "CarMarket.Ford.Convertible.",
+            "proportions": [
+                {
+                    "amount": 2,
+                    "model": "Mustang",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Mustang",
+                    "country": "China"
+                },
+                {
+                    "amount": 3,
+                    "model": "Mustang",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 31,
+            "id": "CarMarket.Subaru.SUV.",
+            "proportions": [
+                {
+                    "amount": 6,
+                    "model": "Outback",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 5,
+                    "model": "Outback",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "Outback",
+                    "country": "USA"
+                },
+                {
+                    "amount": 6,
+                    "model": "Forester",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 4,
+                    "model": "Forester",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "Forester",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "model": "XV",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "XV",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "XV",
+                    "country": "USA"
+                },
+                {
+                    "amount": 0,
+                    "model": "Accent",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Accent",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "Accent",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 32,
+            "id": "CarMarket.Subaru.Sedan.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "Impreza",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Impreza",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "Impreza",
+                    "country": "USA"
+                },
+                {
+                    "amount": 3,
+                    "model": "Liberty",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 3,
+                    "model": "Liberty",
+                    "country": "China"
+                },
+                {
+                    "amount": 6,
+                    "model": "Liberty",
+                    "country": "USA"
+                },
+                {
+                    "amount": 5,
+                    "model": "WRX",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "WRX",
+                    "country": "China"
+                },
+                {
+                    "amount": 5,
+                    "model": "WRX",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 33,
+            "id": "CarMarket.Subaru.Coupe.",
+            "proportions": [
+                {
+                    "amount": 2,
+                    "model": "BRZ",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 2,
+                    "model": "BRZ",
+                    "country": "China"
+                },
+                {
+                    "amount": 2,
+                    "model": "BRZ",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 34,
+            "id": "CarMarket.Subaru.Hatchback.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "Impreza",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Impreza",
+                    "country": "China"
+                },
+                {
+                    "amount": 4,
+                    "model": "Impreza",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 35,
+            "id": "CarMarket.Subaru.Wagon.",
+            "proportions": [
+                {
+                    "amount": 4,
+                    "model": "Levorg",
+                    "country": "Australia"
+                },
+                {
+                    "amount": 0,
+                    "model": "Levorg",
+                    "country": "China"
+                },
+                {
+                    "amount": 0,
+                    "model": "Levorg",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 36,
+            "id": "CarMarket.Audi.SUV.e-tron.",
+            "proportions": [
+                {
+                    "name": "55 quattro Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "55 quattro Technic",
+                    "country": "China"
+                },
+                {
+                    "name": "55 quatro Exclusive",
+                    "country": "China"
+                },
+                {
+                    "name": "Global Limited Edition 1",
+                    "country": "China"
+                },
+                {
+                    "name": "Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "Prestige",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 37,
+            "id": "CarMarket.Audi.SUV.Q2.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S tronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S tronic Sport",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 38,
+            "id": "CarMarket.Audi.SUV.Q2L.",
+            "proportions": [
+                {
+                    "name": "35 TFSI Progressive Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Lifestyle Design",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Lifestyle Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Luxury Design",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Luxury Sport",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 39,
+            "id": "CarMarket.Audi.SUV.Q3.",
+            "proportions": [
+                {
+                    "name": "35 TFSI",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI S line Sportback",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S line Sportback",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RSQ3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RSQ3 Sportback",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI Progressive Design",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Progressive S line",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Lifestyle Design",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Lifestyle Design",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S line",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 40,
+            "id": "CarMarket.Audi.SUV.Q5.",
+            "proportions": [
+                {
+                    "name": "40 TDI quattro Design",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro Design",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TDI quattro Sport",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro Sport",
+                    "country": "Australia"
+                },
+                {
+                    "name": "50 TDI quattro Sport",
+                    "country": "Australia"
+                },
+                {
+                    "name": "SQ5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI Vogue",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Design",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Sport Plus",
+                    "country": "China"
+                },
+                {
+                    "name": "SQ5",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "55 TFSI e Plug In Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "SQ5",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 41,
+            "id": "CarMarket.Audi.SUV.Q7.",
+            "proportions": [
+                {
+                    "name": "45 TDI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "50 TDI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "50 TDI quattro S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "SQ7",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S line Sport Limited",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro S line Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro S line Prestige",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "SQ7",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 42,
+            "id": "CarMarket.Audi.SUV.Q8.",
+            "proportions": [
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "50 TDI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "SQ8",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro Luxury Design",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Selected Line",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Luxury S line",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Selected Line",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Prestige Line",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "SQ8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 43,
+            "id": "CarMarket.Audi.Sportback.A1.",
+            "proportions": [
+                {
+                    "name": "30 TFSI",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S line",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 44,
+            "id": "CarMarket.Audi.Sportback.A3.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RS3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI V",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI L",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI D",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI S",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 45,
+            "id": "CarMarket.Audi.Sportback.A5.",
+            "proportions": [
+                {
+                    "name": "40 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RS5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI L",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI L",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI S",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI S quattro",
+                    "country": "China"
+                },
+                {
+                    "name": "RS5",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Prestige",
+                    "country": "USA"
+                },
+                {
+                    "name": "S5",
+                    "country": "USA"
+                },
+                {
+                    "name": "RS5",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 46,
+            "id": "CarMarket.Audi.Sportback.A7.",
+            "proportions": [
+                {
+                    "name": "45 TFSI quattro S tronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "55 TFSI quattro S tronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S7",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI L S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI S S line",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI E S line",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "S7",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 47,
+            "id": "CarMarket.Audi.Sedan.A3.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RS3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI V",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI L",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI D",
+                    "country": "China"
+                },
+                {
+                    "name": "35 TFSI S",
+                    "country": "China"
+                },
+                {
+                    "name": "S3",
+                    "country": "China"
+                },
+                {
+                    "name": "RS3",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Sport",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S line",
+                    "country": "USA"
+                },
+                {
+                    "name": "S3",
+                    "country": "USA"
+                },
+                {
+                    "name": "RS3",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 48,
+            "id": "CarMarket.Audi.Sedan.A4.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S4",
+                    "country": "Australia"
+                },
+                {
+                    "name": "35 TFSI Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Lifestyle Elegant",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Luxury S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Luxury Elegant",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI quattro Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI quattro Luxury Elegant",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Selected S line",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Selected Elegant",
+                    "country": "China"
+                },
+                {
+                    "name": "S4",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "S4",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 49,
+            "id": "CarMarket.Audi.Sedan.A6.",
+            "proportions": [
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "55 TFSI quattro S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "S6",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 50,
+            "id": "CarMarket.Audi.Sedan.A6L.",
+            "proportions": [
+                {
+                    "name": "40 TFSI Luxury Design",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Luxury Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Selected Design",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Selected Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Selected Design",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Selected Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Exclusive Design",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro Exclusive Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Exclusive Design",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Exclusive Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Flagship Design",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Flagship Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "S6",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI e quattro",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 51,
+            "id": "CarMarket.Audi.Sedan.A8.",
+            "proportions": [
+                {
+                    "name": "50 TDI quattro Tiptronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "55 TFSI quattro Tiptronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S8",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 52,
+            "id": "CarMarket.Audi.Sedan.A8L.",
+            "proportions": [
+                {
+                    "name": "50 TDI quattro Tiptronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "55 TFSI quattro Tiptronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "50 TFSI quattro Comfort",
+                    "country": "China"
+                },
+                {
+                    "name": "50 TFSI quattro Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro Prestige",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro",
+                    "country": "USA"
+                },
+                {
+                    "name": "60 TFSI e Plug In Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "60 TFSI quattro",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 53,
+            "id": "CarMarket.Audi.Cabriolet.A3.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI quattro S line Plus",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S3",
+                    "country": "Australia"
+                },
+                {
+                    "name": "A3 Cabriolet",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 54,
+            "id": "CarMarket.Audi.Cabriolet.A5.",
+            "proportions": [
+                {
+                    "name": "40 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Sport quattro",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Prestige",
+                    "country": "USA"
+                },
+                {
+                    "name": "S5",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 55,
+            "id": "CarMarket.Audi.Avant.A4.",
+            "proportions": [
+                {
+                    "name": "35 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S4",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RS4",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI Lifestyle S line",
+                    "country": "China"
+                },
+                {
+                    "name": "40 TFSI Luxury S line",
+                    "country": "China"
+                },
+                {
+                    "name": "RS4 Avant",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 56,
+            "id": "CarMarket.Audi.Avant.A6.",
+            "proportions": [
+                {
+                    "name": "40 TFSI Luxury S line",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Selected S line",
+                    "country": "China"
+                },
+                {
+                    "name": "RS6 Avant Exclusive Sport Limited Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "RS6",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 57,
+            "id": "CarMarket.Audi.Allroad.A4.",
+            "proportions": [
+                {
+                    "name": "quattro 45 TFSI S tronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "quattro Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "quattro Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Prestige",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 58,
+            "id": "CarMarket.Audi.Allroad.A6.",
+            "proportions": [
+                {
+                    "name": "55 TFSI Prestige Off Road",
+                    "country": "China"
+                },
+                {
+                    "name": "55 TFSI quattro S tronic Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "55 TFSI quattro S tronic Prestige",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 59,
+            "id": "CarMarket.Audi.Coupe.A5.",
+            "proportions": [
+                {
+                    "name": "40 TFSI S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic S line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "S5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "RS5",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI Lifestyle",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI Sport quattro",
+                    "country": "China"
+                },
+                {
+                    "name": "RS5",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Premium Plus",
+                    "country": "USA"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic Prestige",
+                    "country": "USA"
+                },
+                {
+                    "name": "S5",
+                    "country": "USA"
+                },
+                {
+                    "name": "RS5",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 60,
+            "id": "CarMarket.Audi.Coupe.TT.",
+            "proportions": [
+                {
+                    "name": "45 TFSI quattro S tronic",
+                    "country": "Australia"
+                },
+                {
+                    "name": "TTS",
+                    "country": "Australia"
+                },
+                {
+                    "name": "TTRS",
+                    "country": "Australia"
+                },
+                {
+                    "name": "40 TFSI S tronic",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI S tronic",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI S tronic quattro",
+                    "country": "China"
+                },
+                {
+                    "name": "TTS",
+                    "country": "China"
+                },
+                {
+                    "name": "TTRS",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic",
+                    "country": "USA"
+                },
+                {
+                    "name": "TTS",
+                    "country": "USA"
+                },
+                {
+                    "name": "TTRS",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 61,
+            "id": "CarMarket.Audi.Coupe.R8.",
+            "proportions": [
+                {
+                    "name": "R8 V10",
+                    "country": "China"
+                },
+                {
+                    "name": "R8 V10 Performance",
+                    "country": "China"
+                },
+                {
+                    "name": "R8 V10",
+                    "country": "USA"
+                },
+                {
+                    "name": "R8 V10 Performance",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 62,
+            "id": "CarMarket.Audi.Roadster.TT.",
+            "proportions": [
+                {
+                    "name": "45 TFSI quattro",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro NF2015",
+                    "country": "China"
+                },
+                {
+                    "name": "TTS",
+                    "country": "China"
+                },
+                {
+                    "name": "45 TFSI quattro S tronic",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 63,
+            "id": "CarMarket.Audi.Spyder.R8.",
+            "proportions": [
+                {
+                    "name": "R8 V10 Spyder",
+                    "country": "China"
+                },
+                {
+                    "name": "V10",
+                    "country": "USA"
+                },
+                {
+                    "name": "V10 Performance",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 64,
+            "id": "CarMarket.BMW.Sedan.1 Series.",
+            "proportions": [
+                {
+                    "name": "120i Fashion",
+                    "country": "China"
+                },
+                {
+                    "name": "120i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "125i Leading M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "125i M Sports Suit",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 65,
+            "id": "CarMarket.BMW.Sedan.3 Series.",
+            "proportions": [
+                {
+                    "name": "320i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "330i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "330e",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M340i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "320i Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "325i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "325i M Sports Day Night Set",
+                    "country": "China"
+                },
+                {
+                    "name": "330i M Sports Day Night Set",
+                    "country": "China"
+                },
+                {
+                    "name": "320Li M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "325Li M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "325Li xDrive M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "325Li M Sports Day Night Set",
+                    "country": "China"
+                },
+                {
+                    "name": "330Li xDrive M Sports Day Night Set",
+                    "country": "China"
+                },
+                {
+                    "name": "330i",
+                    "country": "USA"
+                },
+                {
+                    "name": "330i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "330e",
+                    "country": "USA"
+                },
+                {
+                    "name": "330e xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M340i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M340i xDrive",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 66,
+            "id": "CarMarket.BMW.Sedan.5 Series.",
+            "proportions": [
+                {
+                    "name": "520i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "530i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "530d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "530e",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M550i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M5 Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "525i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "530i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "530i Fashion M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "540i Fashion M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "525Li Luxury Set",
+                    "country": "China"
+                },
+                {
+                    "name": "525Li M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Leading Luxury Set",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Leading M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li xDrive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li xDrive M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Exclusive Luxury Package",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Exclusive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Executive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "530Li Executive M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "530Le Luxury Set",
+                    "country": "China"
+                },
+                {
+                    "name": "M5 Thunder Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "530i",
+                    "country": "USA"
+                },
+                {
+                    "name": "530i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "530e",
+                    "country": "USA"
+                },
+                {
+                    "name": "530e xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "540i",
+                    "country": "USA"
+                },
+                {
+                    "name": "540i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M550i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M5",
+                    "country": "USA"
+                },
+                {
+                    "name": "M5 Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 67,
+            "id": "CarMarket.BMW.Sedan.7 Series.",
+            "proportions": [
+                {
+                    "name": "730d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "740i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "745e",
+                    "country": "Australia"
+                },
+                {
+                    "name": "750i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M760Li xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "730Li M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "730Li Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li Leading Luxury Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li Leading M Sport Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li Exclusive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li Exclusive M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li xDrive Executive M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740Li xDrive Executive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "750Li xDrive V8 Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "750Li xDrive V8 M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "750Li M760Li xDrive V12 Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "750Li M760Li xDrive V12 Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "740i",
+                    "country": "USA"
+                },
+                {
+                    "name": "740i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "745e xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "750i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M760i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "ALPINA B7 xDrive",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 68,
+            "id": "CarMarket.BMW.SUV.X1.",
+            "proportions": [
+                {
+                    "name": "sDrive18i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive18d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive20i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive25i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive20Li Stylish",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive20Li Exclusive",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive25Li Leading Type",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive25Li Exclusive",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30Le",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive28i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive28i",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 69,
+            "id": "CarMarket.BMW.SUV.X3.",
+            "proportions": [
+                {
+                    "name": "sDrive20i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive20d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive30i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive30d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M40i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive25i Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive25i M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive28i Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive28i M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30i Leading M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "M",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive30i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive30i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive30e",
+                    "country": "USA"
+                },
+                {
+                    "name": "M40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M",
+                    "country": "USA"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 70,
+            "id": "CarMarket.BMW.SUV.X5.",
+            "proportions": [
+                {
+                    "name": "xDrive25d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive30d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive40i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive45e",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M50i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive30i X Design Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Exclusive M Sports Set",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive45e M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "M",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive50i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M50i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M",
+                    "country": "USA"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 71,
+            "id": "CarMarket.BMW.SUV.X7.",
+            "proportions": [
+                {
+                    "name": "xDrive30d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M50i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive40i Leading Luxury Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Exclusive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Exclusive M Sports Set",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Executive Deluxe Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Executive M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive M50i",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive50i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M50i",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 72,
+            "id": "CarMarket.BMW.SAC.X2.",
+            "proportions": [
+                {
+                    "name": "sDrive18i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive20i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M35i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive25i Exclusive M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive25i M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive25i M Off Road Package",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive28i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive28i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M35i",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 73,
+            "id": "CarMarket.BMW.SAC.X4.",
+            "proportions": [
+                {
+                    "name": "xDrive20i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive30i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M40i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive25i M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive25i M Off Road Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30i M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30i M Off Road Package",
+                    "country": "China"
+                },
+                {
+                    "name": "M",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive30i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M",
+                    "country": "USA"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 74,
+            "id": "CarMarket.BMW.SAC.X6.",
+            "proportions": [
+                {
+                    "name": "xDrive30d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive40i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M50i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "xDrive30i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "xDrive40i Exclusive M Sports Set",
+                    "country": "China"
+                },
+                {
+                    "name": "M",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "xDrive40i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M50i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M",
+                    "country": "USA"
+                },
+                {
+                    "name": "M Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 75,
+            "id": "CarMarket.BMW.Coupe.2 Series.",
+            "proportions": [
+                {
+                    "name": "220i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M240i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M2 Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M2 CS",
+                    "country": "Australia"
+                },
+                {
+                    "name": "225i Sports Design Kit",
+                    "country": "China"
+                },
+                {
+                    "name": "225i Exclusive M Sports Set",
+                    "country": "China"
+                },
+                {
+                    "name": "M2 Thunder Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "230i",
+                    "country": "USA"
+                },
+                {
+                    "name": "230i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M240i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M240i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M2 Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 76,
+            "id": "CarMarket.BMW.Coupe.4 Series.",
+            "proportions": [
+                {
+                    "name": "M4",
+                    "country": "Australia"
+                },
+                {
+                    "name": "425i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "430i M Sports Night Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M4 Hunting Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M4 Racing Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M4 CS",
+                    "country": "China"
+                },
+                {
+                    "name": "430i",
+                    "country": "USA"
+                },
+                {
+                    "name": "430i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "440i",
+                    "country": "USA"
+                },
+                {
+                    "name": "440i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M4",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 77,
+            "id": "CarMarket.BMW.Coupe.8 Series.",
+            "proportions": [
+                {
+                    "name": "840i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M850i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M8 Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "840i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "M8",
+                    "country": "China"
+                },
+                {
+                    "name": "M8 Thunder Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "840i",
+                    "country": "USA"
+                },
+                {
+                    "name": "840i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M850i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M8",
+                    "country": "USA"
+                },
+                {
+                    "name": "M8 Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 78,
+            "id": "CarMarket.BMW.Convertible.2 Series.",
+            "proportions": [
+                {
+                    "name": "220i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M240i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "225i Sports Design Kit",
+                    "country": "China"
+                },
+                {
+                    "name": "225i Exclusive M Sports Set",
+                    "country": "China"
+                },
+                {
+                    "name": "230i",
+                    "country": "USA"
+                },
+                {
+                    "name": "230i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M240i",
+                    "country": "USA"
+                },
+                {
+                    "name": "M240i xDrive",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 79,
+            "id": "CarMarket.BMW.Convertible.4 Series.",
+            "proportions": [
+                {
+                    "name": "420i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "430i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "440i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M4",
+                    "country": "Australia"
+                },
+                {
+                    "name": "425i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "430i M Sports Night Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M4 Hunting Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M4 Racing Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "430i",
+                    "country": "USA"
+                },
+                {
+                    "name": "430i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "440i",
+                    "country": "USA"
+                },
+                {
+                    "name": "440i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M4",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 80,
+            "id": "CarMarket.BMW.Convertible.8 Series.",
+            "proportions": [
+                {
+                    "name": "840i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M850i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "840i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "840i",
+                    "country": "USA"
+                },
+                {
+                    "name": "840i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M850i xDrive",
+                    "country": "USA"
+                },
+                {
+                    "name": "M8",
+                    "country": "USA"
+                },
+                {
+                    "name": "M8 Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 81,
+            "id": "CarMarket.BMW.Gran Turismo.3 Series.",
+            "proportions": [
+                {
+                    "name": "320i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "320i M Sport Night Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "330i xDrive M Sport Night Edition",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 82,
+            "id": "CarMarket.BMW.Gran Turismo.6 Series.",
+            "proportions": [
+                {
+                    "name": "620d",
+                    "country": "Australia"
+                },
+                {
+                    "name": "630i Luxury Design Package",
+                    "country": "China"
+                },
+                {
+                    "name": "630i M Sports Suit",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 83,
+            "id": "CarMarket.BMW.Gran Coupe.2 Series.",
+            "proportions": [
+                {
+                    "name": "218i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M235i xDrive",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 84,
+            "id": "CarMarket.BMW.Gran Coupe.4 Series.",
+            "proportions": [
+                {
+                    "name": "420i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "430i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "440i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "425i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "430i M Sports Night Edition",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 85,
+            "id": "CarMarket.BMW.Gran Coupe.8 Series.",
+            "proportions": [
+                {
+                    "name": "840i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M850i xDrive",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M8 Competition",
+                    "country": "Australia"
+                },
+                {
+                    "name": "840i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "840i xDrive M Sports Package",
+                    "country": "China"
+                },
+                {
+                    "name": "M8",
+                    "country": "China"
+                },
+                {
+                    "name": "M8 Thunder Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "M8",
+                    "country": "USA"
+                },
+                {
+                    "name": "M8 Competition",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 86,
+            "id": "CarMarket.BMW.Touring.3 Series.",
+            "proportions": [
+                {
+                    "name": "330i",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 87,
+            "id": "CarMarket.BMW.Touring.5 Series.",
+            "proportions": [
+                {
+                    "name": "530i",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 88,
+            "id": "CarMarket.BMW.Wagon.2 Series.",
+            "proportions": [
+                {
+                    "name": "220i Leading",
+                    "country": "China"
+                },
+                {
+                    "name": "220i Exclusive Sports Set",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 89,
+            "id": "CarMarket.BMW.Roadster.Z4.",
+            "proportions": [
+                {
+                    "name": "sDrive20i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive30i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "M40i",
+                    "country": "Australia"
+                },
+                {
+                    "name": "sDrive25i M Sports Suit",
+                    "country": "China"
+                },
+                {
+                    "name": "M40i M Sport Performance Model",
+                    "country": "China"
+                },
+                {
+                    "name": "sDrive30i",
+                    "country": "USA"
+                },
+                {
+                    "name": "sDrive M40i",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 90,
+            "id": "CarMarket.BMW.BMW i.i3.",
+            "proportions": [
+                {
+                    "name": "Pure Electric",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Pure Electric",
+                    "country": "China"
+                },
+                {
+                    "name": "Pure Electric",
+                    "country": "USA"
+                },
+                {
+                    "name": "Pure Electric S",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 91,
+            "id": "CarMarket.BMW.BMW i.i8.",
+            "proportions": [
+                {
+                    "name": "Coupe",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Roadster",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Roadster",
+                    "country": "China"
+                },
+                {
+                    "name": "Coupe",
+                    "country": "USA"
+                },
+                {
+                    "name": "Roadster",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 92,
+            "id": "CarMarket.Ford.SUV.Puma.",
+            "proportions": [
+                {
+                    "name": "1.0L Petrol FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line 1.0L Petrol FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line V 1.0L Petrol FWD",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 93,
+            "id": "CarMarket.Ford.SUV.New Escape.",
+            "proportions": [
+                {
+                    "name": "FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Vignale FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Vignale AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line PHEV FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "EcoBoost 245 Smart Enjoy",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 Smart Plus",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 AWD",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 4WD Premium",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 Indulge ST-Line",
+                    "country": "China"
+                },
+                {
+                    "name": "S",
+                    "country": "USA"
+                },
+                {
+                    "name": "SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "SE Sport Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "SE Plug In Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "SEL",
+                    "country": "USA"
+                },
+                {
+                    "name": "SEL Plug In Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium Hybrid",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium Plug In Hybrid",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 94,
+            "id": "CarMarket.Ford.SUV.EcoSport.",
+            "proportions": [
+                {
+                    "name": "Ambiente 1.5L Petrol",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Trend 1.0L EcoBoost Petrol",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Titanium 1.0L EcoBoost Petrol",
+                    "country": "Australia"
+                },
+                {
+                    "name": "1.5L MT Fine Wing Type",
+                    "country": "China"
+                },
+                {
+                    "name": "1.5L AT Fine Wing Type",
+                    "country": "China"
+                },
+                {
+                    "name": "1.5L AT Platinum Wing Sport",
+                    "country": "China"
+                },
+                {
+                    "name": "1.5L AT Zunyi Plus Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "S",
+                    "country": "USA"
+                },
+                {
+                    "name": "SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "SES",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 95,
+            "id": "CarMarket.Ford.SUV.Endura.",
+            "proportions": [
+                {
+                    "name": "Trend FWD 2.0L Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Trend 2.0L Turbo Diesel AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line 2.0L Turbo Diesel FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line 2.0L Turbo Diesel AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Titanium 2.0L Turbo Diesel FWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Titanium 2.0L Turbo Diesel AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "SEL",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "ST",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 96,
+            "id": "CarMarket.Ford.SUV.Everest.",
+            "proportions": [
+                {
+                    "name": "Ambiente RWD 3.2L Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Ambiente 4WD 3.2L Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Trend RWD 2.0L Bi Turbo Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Trend 4WD 3.2L Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Trend 4WD 2.0L Bi Turbo Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Titanium 4WD 2.0L Bi Turbo Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.3L GTDI 2WD Gasoline Elite",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 2WD Gasoline Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Gasoline Elite",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Gasoline Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Gasoline Luxury Sports",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Flagship",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Luxury Sports",
+                    "country": "China"
+                },
+                {
+                    "name": "2.3L GTDI 4WD Flagship Sports",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 97,
+            "id": "CarMarket.Ford.SUV.Sharp.",
+            "proportions": [
+                {
+                    "name": "EcoBoost 245 2WD Elite",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 2WD Platinum Sharp",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 2WD Hao Rui Type",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 2WD ST Line",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 4WD ST Line",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 4WD Premium Plus",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 330 V6 4WD ST",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 98,
+            "id": "CarMarket.Ford.SUV.Explorer.",
+            "proportions": [
+                {
+                    "name": "Style Edition 2.3L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Fashion Edition 2.3L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Elite Edition 2.3L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Elite 3.5L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Sport 3.5L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Platinum Edition 3.5L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "ST",
+                    "country": "USA"
+                },
+                {
+                    "name": "Platinum",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 99,
+            "id": "CarMarket.Ford.SUV.Flex.",
+            "proportions": [
+                {
+                    "name": "SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "SEL",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 100,
+            "id": "CarMarket.Ford.SUV.Expedition.",
+            "proportions": [
+                {
+                    "name": "XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "XLT Max",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited Max",
+                    "country": "USA"
+                },
+                {
+                    "name": "King Ranch",
+                    "country": "USA"
+                },
+                {
+                    "name": "King Ranch Max",
+                    "country": "USA"
+                },
+                {
+                    "name": "Platinum",
+                    "country": "USA"
+                },
+                {
+                    "name": "Platinum Max",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 101,
+            "id": "CarMarket.Ford.Sedan.Forex.",
+            "proportions": [
+                {
+                    "name": "Manual Quality",
+                    "country": "China"
+                },
+                {
+                    "name": "Automatic Quality",
+                    "country": "China"
+                },
+                {
+                    "name": "Automatic Pleasure Type",
+                    "country": "China"
+                },
+                {
+                    "name": "Auto Enjoy Type",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 102,
+            "id": "CarMarket.Ford.Sedan.Focus.",
+            "proportions": [
+                {
+                    "name": "1.5L Manual Leaping Type",
+                    "country": "China"
+                },
+                {
+                    "name": "1.5L Automatic Leaping Type",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic NeochaEDGE",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic Blaze Type",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic ST Line",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 103,
+            "id": "CarMarket.Ford.Sedan.Mondeo.",
+            "proportions": [
+                {
+                    "name": "EcoBoost 180 Stylish",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Luxury",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 200 Stylish",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 200 Deluxe",
+                    "country": "China"
+                },
+                {
+                    "name": "S",
+                    "country": "USA"
+                },
+                {
+                    "name": "SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "SEL",
+                    "country": "USA"
+                },
+                {
+                    "name": "Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Hybrid SE",
+                    "country": "USA"
+                },
+                {
+                    "name": "Hybrid SEL",
+                    "country": "USA"
+                },
+                {
+                    "name": "Hybrid Titanium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Plug In Hybrid Titanium",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 104,
+            "id": "CarMarket.Ford.Sedan.Taurus.",
+            "proportions": [
+                {
+                    "name": "EcoBoost 245 Deightful Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 Premier Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 245 Vignale Premium Edition",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 105,
+            "id": "CarMarket.Ford.Hatchback.Fiesta.",
+            "proportions": [
+                {
+                    "name": "ST",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "number": 106,
+            "id": "CarMarket.Ford.Hatchback.Focus.",
+            "proportions": [
+                {
+                    "name": "Trend",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST Line",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Active",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Titanium",
+                    "country": "Australia"
+                },
+                {
+                    "name": "ST",
+                    "country": "Australia"
+                },
+                {
+                    "name": "1.5L Manual Forward Type",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic NeochaEDGE",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic Blaze Type",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost 180 Automatic ST Line",
+                    "country": "China"
+                },
+                {
+                    "name": "Active EcoBoost 180 Power Type",
+                    "country": "China"
+                },
+                {
+                    "name": "Active EcoBoost 180 Jinyao",
+                    "country": "China"
+                }
+            ]
+        },
+        {
+            "number": 107,
+            "id": "CarMarket.Ford.Fastback.Mustang.",
+            "proportions": [
+                {
+                    "name": "2.3L High Performance",
+                    "country": "Australia"
+                },
+                {
+                    "name": "GT",
+                    "country": "Australia"
+                },
+                {
+                    "name": "R SPEC",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.3L EcoBoost",
+                    "country": "China"
+                },
+                {
+                    "name": "EcoBoost",
+                    "country": "USA"
+                },
+                {
+                    "name": "EcoBoost Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "GT",
+                    "country": "USA"
+                },
+                {
+                    "name": "GT Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "BULLITT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Shelby GT350",
+                    "country": "USA"
+                },
+                {
+                    "name": "Shelby GT350R",
+                    "country": "USA"
+                },
+                {
+                    "name": "Shelby GT500",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 108,
+            "id": "CarMarket.Ford.Pickup.Ranger.",
+            "proportions": [
+                {
+                    "name": "4x2 XLT Double Cab Hi Rider 3.2 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x2 XLT Double Cab Hi Rider 2.0 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 XLT Super Cab 3.2 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 XLT Super Cab 2.0 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 XLT Double Cab 3.2 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 XLT Double Cab 2.0 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 Wildtrak Double Cab 3.2 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "4x4 Wildtrak Double Cab 2.0 Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Raptor Double Cab 2.0L Diesel",
+                    "country": "Australia"
+                },
+                {
+                    "name": "XL",
+                    "country": "USA"
+                },
+                {
+                    "name": "XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Lariat",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 109,
+            "id": "CarMarket.Ford.Pickup.F-150.",
+            "proportions": [
+                {
+                    "name": "Raptor Performance Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "Raptor Performance Hardened Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "Raptor Blu-Ray Limited Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "XL",
+                    "country": "USA"
+                },
+                {
+                    "name": "XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Lariat",
+                    "country": "USA"
+                },
+                {
+                    "name": "King Ranch",
+                    "country": "USA"
+                },
+                {
+                    "name": "Platinum",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Raptor",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 110,
+            "id": "CarMarket.Ford.Pickup.Super Duty.",
+            "proportions": [
+                {
+                    "name": "F-250 XL",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 XL",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 XL",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-250 XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 XLT",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-250 Lariat",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 Lariat",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 Lariat",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-250 King Ranch",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 King Ranch",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 King Ranch",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-250 Platinum",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 Platinum",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 Platinum",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-250 Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-350 Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "F-450 Limited",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 111,
+            "id": "CarMarket.Ford.Convertible.Mustang.",
+            "proportions": [
+                {
+                    "name": "2.3L High Performance",
+                    "country": "Australia"
+                },
+                {
+                    "name": "GT",
+                    "country": "Australia"
+                },
+                {
+                    "name": "EcoBoost",
+                    "country": "USA"
+                },
+                {
+                    "name": "EcoBoost Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "GT Premium",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 112,
+            "id": "CarMarket.Subaru.SUV.Outback.",
+            "proportions": [
+                {
+                    "name": "2.5i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0D AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i X AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0D Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "3.6R AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i Classic Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i Deluxe Navigation Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i Special Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i Sports Navigation",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i Sports Limited Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Touring",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited XT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Touring XT",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 113,
+            "id": "CarMarket.Subaru.SUV.Forester.",
+            "proportions": [
+                {
+                    "name": "2.5i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i L AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Hybrid L AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Hybrid S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i Deluxe Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.0i Zhiqing Sports Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.0i Zhiqing Ultimate Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.0i Zhiqing Flagship Version",
+                    "country": "China"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Sport",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Touring",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 114,
+            "id": "CarMarket.Subaru.SUV.XV.",
+            "proportions": [
+                {
+                    "name": "2.0i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i L AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Hybrid AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i AWD Elite Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.0i AWD Deluxe Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.0i Zhiqing Flagship Version",
+                    "country": "China"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Hybrid",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 115,
+            "id": "CarMarket.Subaru.SUV.Accent.",
+            "proportions": [
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Touring",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 116,
+            "id": "CarMarket.Subaru.Sedan.Impreza.",
+            "proportions": [
+                {
+                    "name": "2.0i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i L AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Sport",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 117,
+            "id": "CarMarket.Subaru.Sedan.Liberty.",
+            "proportions": [
+                {
+                    "name": "2.5i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "3.6R AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.5i AWD Fashion Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i AWD Glory",
+                    "country": "China"
+                },
+                {
+                    "name": "2.5i Glory Limited Edition",
+                    "country": "China"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Sport",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited XT",
+                    "country": "USA"
+                },
+                {
+                    "name": "Touring XT",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 118,
+            "id": "CarMarket.Subaru.Sedan.WRX.",
+            "proportions": [
+                {
+                    "name": "AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "STI AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "STI Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "STI spec R AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "STI",
+                    "country": "USA"
+                },
+                {
+                    "name": "STI Limited",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 119,
+            "id": "CarMarket.Subaru.Coupe.BRZ.",
+            "proportions": [
+                {
+                    "name": "Premium",
+                    "country": "Australia"
+                },
+                {
+                    "name": "tS",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Type RS 6MT",
+                    "country": "China"
+                },
+                {
+                    "name": "Type RS 6AT",
+                    "country": "China"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                },
+                {
+                    "name": "tS",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 120,
+            "id": "CarMarket.Subaru.Hatchback.Impreza.",
+            "proportions": [
+                {
+                    "name": "2.0i AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i L AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0i S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "Stock",
+                    "country": "USA"
+                },
+                {
+                    "name": "Premium",
+                    "country": "USA"
+                },
+                {
+                    "name": "Sport",
+                    "country": "USA"
+                },
+                {
+                    "name": "Limited",
+                    "country": "USA"
+                }
+            ]
+        },
+        {
+            "number": 121,
+            "id": "CarMarket.Subaru.Wagon.Levorg.",
+            "proportions": [
+                {
+                    "name": "1.6 GT AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "1.6 GT Premium AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0 GT S AWD",
+                    "country": "Australia"
+                },
+                {
+                    "name": "2.0 STI Sport AWD",
+                    "country": "Australia"
+                }
+            ]
+        }
+    ]
+}

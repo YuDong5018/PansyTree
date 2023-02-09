@@ -1,0 +1,480 @@
+[
+  {
+    "value": 76,
+    "name": "Subject",
+    "children": [
+      {
+        "value": 75,
+        "name": "Natural Science",
+        "children": [
+          {
+            "value": 60,
+            "name": "Chemistry"
+          },{
+            "value": 63,
+            "name": "Physics",
+            "children": [
+              {
+                "value": 20,
+                "name": "Physics"
+              }]
+          },{
+            "value": 57,
+            "name": "Maths",
+            "children": [
+              {
+                "value": 57,
+                "name": "Info and Computing Science"
+              }
+
+            ]
+          },{
+            "value": 53,
+            "name": "Biosciences"
+          },{
+            "value": 43,
+            "name": "Geography"
+          },
+          {
+            "value": 20,
+            "name": "Biology"
+          },
+          {
+            "value": 24,
+            "name": "Marine Science",
+            "children": [
+              {
+                "value": 24,
+                "name": "Marine Science"
+              }
+            ]
+          },
+          {
+            "value": 14,
+            "name": "Psychology",
+            "children": [
+              {
+                "value": 14,
+                "name": "Psychology"
+              }
+            ]
+          },
+          {
+            "value": 21,
+            "name": "Atmospheric Science"
+          },{
+            "value": 14,
+            "name": "Geographical Science"
+          },
+          {
+            "value": 10,
+            "name": "Geophysics",
+            "children": [
+              {
+                "value": 10,
+                "name": "Geophysics"
+              }
+
+            ]
+          }
+
+        ]
+      },
+      {
+        "value": 74,
+        "name": "Engineering",
+        "children": [
+          {
+            "value": 65,
+            "name": "Computer",
+            "children": [
+              {
+                "value": 45,
+                "name": "Software Engineering"
+              }
+            ]
+          },
+          {
+            "value": 46,
+            "name": "Materials"
+          },
+          {
+            "value": 47,
+            "name": "Eletronic info",
+            "children": [
+              {
+                "value": 13,
+                "name": "Microeletronics Science and Engineering"
+              },
+              {
+                "value": 21,
+                "name": "Photoeletric Information Science and Engineering"
+              }
+            ]
+          },{
+            "value": 41,
+            "name": "Automation",
+            "children": [
+              {
+                "value": 21,
+                "name": "Automation"
+              }
+            ]
+          },{
+            "value": 38,
+            "name": "Environmental Science and Engineering"
+          },{
+            "value": 39,
+            "name": "Mechanics",
+            "children": [
+              {
+                "value": 22,
+                "name": "Theoretical and applied mechanics"
+              }
+            ]
+          },{
+            "value": 30,
+            "name": "Architecture",
+            "children": [
+              {
+                "value": 13,
+                "name": "Urban and Rural Planning"
+              }
+            ]
+          },{
+            "value": 30,
+            "name": "Civil",
+            "children": [
+              {
+                "value": 13,
+                "name": "Civil Engineering"
+              }
+            ]
+          },{
+            "value": 20,
+            "name": "Mapping"
+          },{
+            "value": 20,
+            "name": "Water Conservancy"
+          },{
+            "value": 19,
+            "name": "Electric",
+            "children": [
+              {
+                "value": 21,
+                "name": "Electrical Engineering and Automation"
+              }
+            ]
+          },{
+            "value": 47,
+            "name": "Electrical Info"
+          },{
+            "value": 18,
+            "name": "Energy and Power"
+          },{
+            "value": 13,
+            "name": "Biomedical Engineering",
+            "children": [
+              {
+                "value": 13,
+                "name": "Biomedical Engineering"
+              }
+            ]
+          },{
+            "value": 11,
+            "name": "Transportation",
+            "children": [
+              {
+                "value": 11,
+                "name": "Traffic Engineering"
+              }
+            ]
+          },{
+            "value": 14,
+            "name": "Dynamics",
+            "children": [
+              {
+                "value": 14,
+                "name": "Engineering Dynamics"
+              }
+            ]
+          },{
+            "value": 14,
+            "name": "Chemicals and Pharmaceuticals",
+            "children": [
+              {
+                "value": 14,
+                "name": "Chemical Engineering and Technology"
+              }
+            ]
+          },{
+            "value": 14,
+            "name": "Environmental Science"
+          },{
+            "value": 2,
+            "name": "Geology"
+          }
+
+        ]
+      },
+      {
+        "value": 72,
+        "name": "Economics",
+        "children": [
+          {
+            "value": 46,
+            "name": "Economics"
+          },
+          {
+            "value": 46,
+            "name": "Finance",
+            "children": [
+              {
+                "value": 21,
+                "name": "Finance"
+              }
+
+            ]
+          }
+        ]
+      },
+      {
+        "value": 67,
+        "name": "Medical Science",
+        "children": [
+          {
+            "value": 60,
+            "name": "Pharmacy",
+            "children": [
+              {
+                "value": 49,
+                "name": "Pharmacy"
+              }
+            ]
+          },
+          {
+            "value": 35,
+            "name": "Public Health and Preventive Medicine",
+            "children": [
+              {
+                "value": 26,
+                "name": "Preventive Medicine"
+              }
+            ]
+          },{
+            "value": 28,
+            "name": "Clinical Medicine",
+            "children": [
+              {
+                "value": 28,
+                "name": "Clinical Medicine"
+              }
+            ]
+          },{
+            "value": 14,
+            "name": "Stomatology",
+            "children": [
+              {
+                "value": 28,
+                "name": "Stomatology"
+              }
+            ]
+          },{
+            "value": 15,
+            "name": "Basic Medicine",
+            "children": [
+              {
+                "value": 15,
+                "name": "Basic Medicine"
+              }
+            ]
+
+          },{
+            "value": 4,
+            "name": "Forensic Medicine",
+            "children": [
+              {
+                "value": 4,
+                "name": "Forensic Medicine"
+              }
+            ]
+          },{
+            "value": 2,
+            "name": "Medical Science Technology",
+            "children": [
+              {
+                "value": 2,
+                "name": "Inspection Tech"
+              }
+            ]
+          },{
+            "value": 1,
+            "name": "Nursing",
+            "children": [
+              {
+                "value": 1,
+                "name": "Nursing"
+              }
+            ]
+          }
+        ]
+      },{
+        "value": 42,
+        "name": "Management Science",
+        "children": [
+          {
+            "value": 40,
+            "name": "Tourism Management"
+          },
+          {
+            "value": 24,
+            "name": "Business Administration",
+            "children": [
+              {
+                "value": 11,
+                "name": "Accountancy"
+              },{
+                "value": 14,
+                "name": "Business Administration"
+              }
+            ]
+          },
+          {
+            "value": 11,
+            "name": "Management Science and Engineering",
+            "children": [
+              {
+                "value": 11,
+                "name": "Info Management and System"
+              }
+            ]
+          },{
+            "value": 1,
+            "name": "Public Administration"
+          },{
+            "value": 1,
+            "name": "Library, Info and Archives Management"
+          }
+
+        ]
+      },
+      {
+        "value": 19,
+        "name": "Management",
+        "children": [
+          {
+            "value": 19,
+            "name": "Management Science and Engineering"
+          },{
+            "value": 13,
+            "name": "Business Administration"
+          },{
+            "value": 7,
+            "name": "Public Administration",
+            "children": [
+              {
+                "value": 7,
+                "name": "Land Resource Management"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": 15,
+        "name": "Philosophy",
+        "children": [
+          {
+            "value": 15,
+            "name": "Philosophy",
+            "children": [
+              {
+                "value": 12,
+                "name": "logic"
+              },
+              {
+                "value": 2,
+                "name": "Philosophy"
+              }
+            ]
+          }
+
+        ]
+      },{
+        "value": 18,
+        "name": "Law",
+        "children": [
+          {
+            "value": 16,
+            "name": "Law",
+            "children": [
+              {
+                "value": 16,
+                "name": "Law"
+              }
+            ]
+          },{
+            "value": 2,
+            "name": "Sociology"
+          },{
+            "value": 1,
+            "name": "Political Science",
+            "children": [
+              {
+                "value": 1,
+                "name": "International Politics"
+              }
+            ]
+          }
+
+        ]
+      },{
+        "value": 5,
+        "name": "Literature",
+        "children": [
+          {
+            "value": 1,
+            "name": "Chinese Language and Literature",
+            "children": [
+              {
+                "value": 1,
+                "name": "Chinese Literature"
+              }
+
+            ]
+          },{
+            "value": 1,
+            "name": "Foreign Language and Literature"
+          },{
+            "value": 4,
+            "name": "Journalism"
+          },{
+            "value": 1,
+            "name": "Journalism and communication"
+          }
+
+        ]
+      },
+      {
+        "value": 1,
+        "name": "History",
+        "children": [
+          {
+            "value": 1,
+            "name": "History",
+            "children": [
+              {
+                "value": 1,
+                "name": "History"
+              }
+
+            ]
+          }
+
+        ]
+      }
+
+    ]
+  }
+
+]
